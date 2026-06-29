@@ -68,6 +68,14 @@
           <p class="font-body text-sm text-paper/75 mt-3 leading-relaxed">
             Second weekend of May through the second weekend of October. Reserve your day on the water.
           </p>
+          <div id="hero-wx" class="mt-6 pt-5 border-t border-paper/20 hidden" data-lat="45.6953" data-lon="-90.4040">
+            <p class="eyebrow text-paper/55">On the water now · Phillips</p>
+            <div class="mt-2.5 flex items-end gap-3">
+              <span id="wx-temp" class="font-display text-paper text-4xl leading-none" style="font-variation-settings:'opsz' 40,'SOFT' 60;"></span>
+              <span id="wx-sky" class="font-body text-sm text-paper/80 pb-1"></span>
+            </div>
+            <p id="wx-meta" class="mt-2 font-mono text-[10px] tracking-[0.16em] uppercase text-paper/55"></p>
+          </div>
         </div>
       </div>
     </div>
@@ -81,6 +89,20 @@
       <span>Season: Mid-May — Mid-Oct</span>
     </div>
   </div>
+
+  <script>(function(){
+    var box=document.getElementById('hero-wx'); if(!box) return;
+    var lat=box.getAttribute('data-lat'), lon=box.getAttribute('data-lon');
+    var WMO={0:'Clear',1:'Mostly clear',2:'Partly cloudy',3:'Overcast',45:'Fog',48:'Fog',51:'Light drizzle',53:'Drizzle',55:'Drizzle',61:'Light rain',63:'Rain',65:'Heavy rain',66:'Freezing rain',67:'Freezing rain',71:'Light snow',73:'Snow',75:'Heavy snow',77:'Snow',80:'Showers',81:'Showers',82:'Heavy showers',85:'Snow showers',86:'Snow showers',95:'Thunderstorms',96:'Thunderstorms',99:'Thunderstorms'};
+    var url='https://api.open-meteo.com/v1/forecast?latitude='+lat+'&longitude='+lon+'&current=temperature_2m,apparent_temperature,wind_speed_10m,weather_code&temperature_unit=fahrenheit&wind_speed_unit=mph&timezone=America%2FChicago';
+    fetch(url).then(function(r){return r.json();}).then(function(d){
+      var c=d&&d.current; if(!c) return;
+      document.getElementById('wx-temp').textContent=Math.round(c.temperature_2m)+'°';
+      document.getElementById('wx-sky').textContent=WMO[c.weather_code]||'';
+      document.getElementById('wx-meta').textContent='Feels '+Math.round(c.apparent_temperature)+'° · Wind '+Math.round(c.wind_speed_10m)+' mph';
+      box.classList.remove('hidden');
+    }).catch(function(){});
+  })();</script>
 </section>
 <section aria-hidden="true" class="bg-pine-deep text-paper/85 overflow-hidden border-y border-paper/10">
   <div class="drift whitespace-nowrap py-4 flex gap-12 font-display italic text-2xl lg:text-3xl"

@@ -236,6 +236,15 @@
       });
     });
 
+    // pre-select boat handed off from the Fleet page
+    try {
+      var _pb = sessionStorage.getItem('ppc_boat');
+      if (_pb) { sessionStorage.removeItem('ppc_boat');
+        var _seg = W.querySelector('.seg[data-boat="' + _pb + '"]');
+        if (_seg) _seg.click();
+      }
+    } catch (e) {}
+
     // ── calendar (date range) ──
     const cal      = $('cal-grid');
     const calLabel = $('cal-label');
