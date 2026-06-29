@@ -123,6 +123,10 @@
            live. Everything below is a faithful mock of that behavior.
       ============================================================ -->
       <div id="booking-widget" class="bg-paper text-ink relative" style="box-shadow: 0 40px 80px -40px rgba(0,0,0,0.5), 0 2px 0 0 rgba(0,0,0,0.05);">
+        <div class="bg-rust/10 border-b border-rust/25 px-7 lg:px-9 py-4">
+          <p class="font-mono text-[10px] tracking-[0.18em] uppercase text-rust-deep">Online booking goes live soon</p>
+          <p class="font-body text-sm text-ink/75 mt-1.5 leading-relaxed">To reserve a boat right now, call or text <a href="tel:+17155644355" class="text-navy font-medium underline decoration-rust/50 underline-offset-2">715-564-4355</a>. The steps below are a working preview of how online booking will look.</p>
+        </div>
         <!-- corner stamp -->
         <div class="absolute -top-4 -right-4 w-20 h-20 rotate-[8deg] flex items-center justify-center bg-rust text-paper font-mono text-[10px] tracking-widest uppercase text-center leading-tight border-2 border-rust-deep" style="box-shadow: 0 8px 20px -8px rgba(184,90,54,0.55);">
           Book<br>it<br>yourself
@@ -298,6 +302,7 @@
               <div class="flex justify-between gap-4 px-5 py-3 bg-navy/[0.03]"><span class="text-ink/55">Total</span><span id="cf-deposit" class="text-navy font-medium text-right">—</span></div>
             </div>
             <p class="font-body text-ink/75 mt-6 leading-relaxed">Your waivers are on the way to <span id="cf-email" class="text-navy">your email</span>. Sign them before you launch and you're cleared to cast off. We'll be in touch with your pickup or delivery details — plan to arrive about 15 minutes early for paperwork and a quick run-through.</p>
+            <p class="font-body text-[13px] text-rust-deep bg-rust/10 border border-rust/20 px-4 py-3 mt-5 leading-relaxed">Preview only. This didn't make a real reservation. To lock in these dates now, call or text 715-564-4355.</p>
             <p class="font-body italic text-ink/55 mt-5 text-sm">— Phillips Pontoon Co.</p>
             <button type="button" id="bk-reset" class="mt-6 font-mono text-[11px] tracking-[0.16em] uppercase text-rust hover:text-rust-deep transition">Book another day →</button>
           </div>
