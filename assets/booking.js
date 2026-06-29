@@ -50,16 +50,35 @@
     const $ = id => document.getElementById(id);
     const setText = (id, v) => { const el = $(id); if (el) el.textContent = v; };
 
+    // Per-boat pricing. Fishing boat from Taylor's waiver: half-day (4 hr) $100, full day $150, +$25/hr; multi-day rate not yet provided.
+    const BOATS = {
+      pontoon: {
+        full: { title: 'Full day', sub: '9 AM – 5 PM', priceLabel: '$250', price: 250 },
+        alt:  { value: 'hourly', title: 'By the hour', sub: 'up to 4 hours', priceLabel: '$40/hr', price: 0 },
+        multi: { d2: 490, d3: 730, addl: 225 }
+      },
+      fishing: {
+        full: { title: 'Full day', sub: '6 AM – 1 PM or 1:30 – 8:30 PM', priceLabel: '$150', price: 150 },
+        alt:  { value: 'half', title: 'Half day', sub: '4 hours, any time', priceLabel: '$100', price: 100 },
+        multi: null
+      }
+    };
+    const boatCfg = () => BOATS[state.boatKey] || BOATS.pontoon;
     const dayCount = () => { if (!state.start) return 0; const e = state.end || state.start; return Math.round((e - state.start) / DAY) + 1; };
     function price() {
       const n = dayCount();
+      const b = boatCfg();
       let p = 0;
       if (n <= 1) {
-        if (state.window === 'full') p = 250;
+        if (state.window === 'full') p = b.full.price;
         else if (state.window === 'hourly') p = 40 * (+state.hours || 0);
-      } else if (n === 2) p = 490;
-      else if (n === 3) p = 730;
-      else if (n > 3) p = 730 + 225 * (n - 3);
+        else if (state.window === 'half') p = b.alt.price;
+      } else {
+        if (!b.multi) return null;            // fishing multi-day: rate not set, shown as "by quote"
+        if (n === 2) p = b.multi.d2;
+        else if (n === 3) p = b.multi.d3;
+        else p = b.multi.d3 + b.multi.addl * (n - 3);
+      }
       if (state.delivery === 'delivery') p += 80;
       return p;
     }
@@ -85,7 +104,9 @@
         if (state.delivery === 'pickup')   return 'Pick up at our place · ' + ret;
         return '—';
       }
-      if (state.window === 'full')   return 'Full day · 9 AM – 5 PM';
+      const b = boatCfg();
+      if (state.window === 'full')   return 'Full day · ' + b.full.sub;
+      if (state.window === 'half')   return 'Half day · ' + b.alt.sub;
       if (state.window === 'hourly') return (+state.hours ? (state.hours + ' hr' + (+state.hours > 1 ? 's' : '') + ' · $40/hr') : 'By the hour');
       return '—';
     }
@@ -97,7 +118,7 @@
       setText('sum-window-label', scheduleLabel());
       setText('sum-window', windowLabel());
       const p = price();
-      setText('sum-deposit', p ? ('$' + p) : '—');
+      setText('sum-deposit', p === null ? 'By quote' : (p ? ('$' + p) : '—'));
     }
 
     // Step 2: single day -> full day or hourly. Multi-day -> pickup vs delivery
@@ -130,6 +151,10 @@
         syncSummary();
       } else {
         winSub.textContent = 'Pick the window that fits your day.';
+        const b = boatCfg();
+        const fb = $('bk-win-full'), ab = $('bk-win-alt');
+        if (fb) { fb.querySelector('.seg-title').innerHTML = b.full.title + ' <span class="opacity-50">· ' + b.full.sub + '</span>'; fb.querySelector('.seg-price').textContent = b.full.priceLabel; }
+        if (ab) { ab.dataset.value = b.alt.value; ab.querySelector('.seg-title').innerHTML = b.alt.title + ' <span class="opacity-50">· ' + b.alt.sub + '</span>'; ab.querySelector('.seg-price').textContent = b.alt.priceLabel; }
         if (mode !== lastWinMode) {              // arriving from multi
           state.delivery = null;
           W.querySelectorAll('.seg[data-group="delivery"]').forEach(x => x.classList.remove('sel'));
@@ -147,7 +172,7 @@
       setText('cf-window', windowLabel());
       setText('cf-party',  state.party  || '—');
       const p = price();
-      setText('cf-deposit', p ? ('$' + p + ' + tax') : '—');
+      setText('cf-deposit', p === null ? 'Call us for a multi-day quote' : (p ? ('$' + p + ' + tax') : '—'));
       setText('cf-email',  state.email  || 'your email');
     }
 
@@ -187,6 +212,7 @@
       if (n === 2) {
         if (dayCount() > 1) return !!state.delivery;
         if (state.window === 'full') return true;
+        if (state.window === 'half') return true;
         if (state.window === 'hourly') return +state.hours > 0;
         return false;
       }
@@ -223,6 +249,10 @@
         state[btn.dataset.field] = btn.dataset.value;
         if (btn.dataset.field === 'boat') {
           state.cap = +btn.dataset.cap || 12;
+          state.boatKey = btn.dataset.boat;
+          state.window = null; state.hours = 0;   // boats price differently; window gets re-picked
+          W.querySelectorAll('.seg[data-group="window"], .seg[data-group="hours"]').forEach(x => x.classList.remove('sel'));
+          if (hoursBox) hoursBox.classList.add('hidden');
           if (partyInput) { partyInput.max = state.cap; partyInput.placeholder = 'up to ' + state.cap; }
         }
         if (btn.dataset.field === 'window' && hoursBox) {
