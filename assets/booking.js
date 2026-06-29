@@ -60,7 +60,7 @@
       fishing: {
         full: { title: 'Full day', sub: '6 AM – 1 PM or 1:30 – 8:30 PM', priceLabel: '$150', price: 150 },
         alt:  { value: 'half', title: 'Half day', sub: '4 hours, any time', priceLabel: '$100', price: 100 },
-        multi: null
+        multi: { d2: 300, d3: 450, addl: 150 }   // full-day rate x days; no multi-day discount yet, confirm with Taylor
       }
     };
     const boatCfg = () => BOATS[state.boatKey] || BOATS.pontoon;
