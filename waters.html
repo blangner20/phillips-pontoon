@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>The Waters — Phillips Pontoon Co.</title>
+<meta name="description" content="The lakes around Phillips, Wisconsin: Long, Duroy, Wilson, Elk, Solberg." />
+<meta name="theme-color" content="#1A2B47" />
+<link rel="stylesheet" href="assets/site.css" />
+</head>
+<body class="bg-paper text-ink grain antialiased">
+<header class="sticky top-0 z-40 bg-paper/85 backdrop-blur-md border-b border-ink/10">
+  <nav class="max-w-[1440px] mx-auto px-6 lg:px-10 h-[68px] flex items-center justify-between gap-6">
+    <a href="index.html" class="flex items-center gap-3 group">
+      <img src="assets/img/logo.png" alt="Phillips Pontoon Co." class="h-12 w-12 object-contain">
+      <div class="leading-none">
+        <div class="font-display text-[17px] font-medium text-navy tracking-tight" style="font-variation-settings:'opsz' 24,'SOFT' 60;">Phillips Pontoon Co.</div>
+        <div class="eyebrow text-pine mt-1">Phillips · Wisconsin</div>
+      </div>
+    </a>
+    <ul class="hidden lg:flex items-center gap-8 text-[14px] font-body text-ink/80"><li><a href="fleet.html" class="hover:text-navy transition">The Fleet</a></li><li><a href="book.html" class="hover:text-navy transition">Book a Day</a></li><li><a href="waters.html" class="text-navy font-medium transition">The Waters</a></li><li><a href="rules.html" class="hover:text-navy transition">Rules of the Lake</a></li><li><a href="visit.html" class="hover:text-navy transition">Plan a Visit</a></li></ul>
+    <a href="book.html" class="hidden md:inline-flex btn-primary !py-2.5 !px-5 !text-[12px]">Reserve <span aria-hidden="true">→</span></a>
+    <button id="mobtoggle" class="lg:hidden text-navy" aria-label="Menu" aria-expanded="false">
+      <svg viewBox="0 0 24 24" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 7h18M3 12h18M3 17h18"/></svg>
+    </button>
+  </nav>
+  <div id="mobnav" class="hidden lg:hidden border-t border-ink/10 bg-paper px-6 py-4 font-body text-[15px]"><a href="fleet.html" class="block py-2 text-ink/80">The Fleet</a><a href="book.html" class="block py-2 text-ink/80">Book a Day</a><a href="waters.html" class="block py-2 text-navy font-medium">The Waters</a><a href="rules.html" class="block py-2 text-ink/80">Rules of the Lake</a><a href="visit.html" class="block py-2 text-ink/80">Plan a Visit</a>
+    <a href="book.html" class="block py-2 text-rust font-medium">Reserve a boat →</a>
+  </div>
+</header>
+<section id="waters" class="relative py-24 lg:py-36">
+  <div class="max-w-[1440px] mx-auto px-6 lg:px-10">
+
+    <div class="grid lg:grid-cols-12 gap-10">
+      <div class="lg:col-span-5">
+        <div class="chapter-num text-pine/85 text-[120px] lg:text-[200px]">03</div>
+        <p class="eyebrow text-pine mt-4">Chapter Three</p>
+        <h2 class="font-display text-4xl lg:text-[56px] leading-[0.95] mt-3 text-navy tighter">The Waters</h2>
+        <div class="wave-rule mt-7"></div>
+      </div>
+      <div class="lg:col-span-7 lg:pt-10">
+        <p class="font-body text-lg lg:text-xl leading-relaxed text-ink/85 max-w-2xl">
+          We run the lakes around Phillips, in Price County, one of the quieter corners of the Wisconsin Northwoods. Some are made for cruising and swimming, some are best left to the fishing. Here's what to know about each.
+        </p>
+      </div>
+    </div>
+
+    <!-- Map + lake list -->
+    <div class="mt-16 lg:mt-24 grid lg:grid-cols-12 gap-8 lg:gap-12">
+
+      <!-- MAP -->
+      <div class="lg:col-span-7">
+        <div class="relative aspect-square overflow-hidden border border-ink/12">
+          <img src="assets/img/map.jpg" alt="A hand-illustrated map of the Phillips Chain of Lakes in Price County, Wisconsin." class="w-full h-full object-cover" />
+        </div>
+        <p class="text-center font-body italic text-sm text-ink/55 mt-4">
+          Not to scale. The actual chain is more generous on the south end and a bit more winding through the middle.
+        </p>
+      </div>
+
+      <!-- LAKE LIST -->
+      <div class="lg:col-span-5">
+        <div class="border-t border-ink/15">
+          <article class="lake-row p-6 lg:px-2 border-b border-ink/15 grid grid-cols-[auto_1fr] gap-5">
+            <span class="font-mono text-xs text-ink/45 mt-1.5">L1</span>
+            <div>
+              <h4 class="font-display text-2xl text-navy" style="font-variation-settings:'opsz' 36,'SOFT' 60;">Long Lake</h4>
+              <p class="font-body text-[15px] text-ink/75 mt-1.5 leading-relaxed">419 acres and 54 feet at its deepest. Abundant walleye, with panfish and muskie fairly common. Two sandbars to pull up to, swim, and soak in the day.</p>
+              <div class="flex flex-wrap gap-x-5 gap-y-1 mt-3 text-[11px] font-mono text-ink/55 uppercase tracking-wider">
+                <span>Walleye · Muskie · Panfish</span>
+                <span>419 ac · Max 54'</span>
+              </div>
+            </div>
+          </article>
+          <article class="lake-row p-6 lg:px-2 border-b border-ink/15 grid grid-cols-[auto_1fr] gap-5">
+            <span class="font-mono text-xs text-ink/45 mt-1.5">L2</span>
+            <div>
+              <h4 class="font-display text-2xl text-navy" style="font-variation-settings:'opsz' 36,'SOFT' 60;">Duroy</h4>
+              <p class="font-body text-[15px] text-ink/75 mt-1.5 leading-relaxed">350 acres and 18 feet deep, stumpy and weedy, best left to the anglers. Musky, walleye, northern pike, both bass, and panfish all hold here.</p>
+              <div class="flex flex-wrap gap-x-5 gap-y-1 mt-3 text-[11px] font-mono text-ink/55 uppercase tracking-wider">
+                <span>Musky · Walleye · Bass</span>
+                <span>350 ac · Max 18'</span>
+              </div>
+            </div>
+          </article>
+          <article class="lake-row p-6 lg:px-2 border-b border-ink/15 grid grid-cols-[auto_1fr] gap-5">
+            <span class="font-mono text-xs text-ink/45 mt-1.5">L3</span>
+            <div>
+              <h4 class="font-display text-2xl text-navy" style="font-variation-settings:'opsz' 36,'SOFT' 60;">Wilson</h4>
+              <p class="font-body text-[15px] text-ink/75 mt-1.5 leading-relaxed">348 acres and 11 feet deep, reached from public landings. A good cruising lake with musky, walleye, northern pike, largemouth bass, and panfish.</p>
+              <div class="flex flex-wrap gap-x-5 gap-y-1 mt-3 text-[11px] font-mono text-ink/55 uppercase tracking-wider">
+                <span>Musky · Walleye · Bass</span>
+                <span>348 ac · Max 11'</span>
+              </div>
+            </div>
+          </article>
+          <article class="lake-row p-6 lg:px-2 border-b border-ink/15 grid grid-cols-[auto_1fr] gap-5">
+            <span class="font-mono text-xs text-ink/45 mt-1.5">L4</span>
+            <div>
+              <h4 class="font-display text-2xl text-navy" style="font-variation-settings:'opsz' 36,'SOFT' 60;">Elk</h4>
+              <p class="font-body text-[15px] text-ink/75 mt-1.5 leading-relaxed">87 acres and 25 feet deep, with a public landing and beach. On the stumpy, weedy side and best for fishing — musky, smallmouth, walleye, northern pike, and panfish.</p>
+              <div class="flex flex-wrap gap-x-5 gap-y-1 mt-3 text-[11px] font-mono text-ink/55 uppercase tracking-wider">
+                <span>Musky · Smallmouth · Walleye</span>
+                <span>87 ac · Max 25'</span>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Off-chain callout: Solberg -->
+        <div class="mt-10 p-6 lg:p-7 bg-paper-warm/50 border-l-2 border-rust">
+          <p class="eyebrow text-rust">Our home water</p>
+          <h4 class="font-display text-2xl text-navy mt-3" style="font-variation-settings:'opsz' 36,'SOFT' 60;">Solberg Lake</h4>
+          <p class="font-body text-[15px] text-ink/75 mt-2 leading-relaxed">844 acres and 16 feet deep, the lake we call home, minutes from our place. Public landings, public beaches, and a county campground with two brand-new playgrounds. Water clarity runs low. Musky, walleye, largemouth bass, northern pike, and panfish.</p>
+          <div class="flex flex-wrap gap-x-5 gap-y-1 mt-3 text-[11px] font-mono text-ink/55 uppercase tracking-wider">
+            <span>Walleye · Musky · Bass</span>
+            <span>844 ac · Max 16'</span>
+            <span>Our home lake</span>
+          </div>
+        </div>
+
+        <a href="book.html" class="inline-flex items-center gap-2 mt-10 font-display italic text-xl text-rust hover:text-rust-deep transition" style="font-variation-settings:'opsz' 36,'SOFT' 100,'WONK' 1;">
+          Tell me which lake to start on
+          <svg class="w-5 h-5" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 10h14M11 4l6 6-6 6"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- Things to do -->
+    <div class="mt-24 lg:mt-36">
+      <div class="flex flex-wrap items-end justify-between gap-6">
+        <div class="max-w-xl">
+          <p class="eyebrow text-pine">Above & Beside the Water</p>
+          <h3 class="font-display text-3xl lg:text-[44px] leading-[1.02] mt-3 text-navy tighter">Six things worth doing<br>when the boat is on the trailer.</h3>
+        </div>
+        <p class="font-body italic text-ink/55 text-sm max-w-xs">
+          All within a short drive of Phillips. Ask us for recommendations when you pick up the boat.
+        </p>
+      </div>
+
+      <div class="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-ink/12 border-y border-ink/12">
+        <article class="bg-paper p-7 lg:p-9">
+          <p class="eyebrow text-pine">Folk Art</p>
+          <h4 class="font-display text-2xl lg:text-3xl mt-2 text-navy" style="font-variation-settings:'opsz' 36,'SOFT' 60;">Wisconsin Concrete Park</h4>
+          <p class="font-body text-[15px] text-ink/75 mt-3 leading-relaxed">Fred Smith's 237-figure outdoor folk-art masterwork, right in Phillips. Bring an hour. Bring two.</p>
+          <p class="font-mono text-[10px] text-ink/50 uppercase tracking-widest mt-5">Free · Open daily</p>
+        </article>
+        <article class="bg-paper p-7 lg:p-9">
+          <p class="eyebrow text-pine">High Ground</p>
+          <h4 class="font-display text-2xl lg:text-3xl mt-2 text-navy" style="font-variation-settings:'opsz' 36,'SOFT' 60;">Timm's Hill</h4>
+          <p class="font-body text-[15px] text-ink/75 mt-3 leading-relaxed">The highest natural point in Wisconsin — 1,951 ft. The view from the tower stretches all the way past the lakes you'll be on tomorrow.</p>
+          <p class="font-mono text-[10px] text-ink/50 uppercase tracking-widest mt-5">35-min drive · Free</p>
+        </article>
+        <article class="bg-paper p-7 lg:p-9">
+          <p class="eyebrow text-pine">Trail</p>
+          <h4 class="font-display text-2xl lg:text-3xl mt-2 text-navy" style="font-variation-settings:'opsz' 36,'SOFT' 60;">Smith Rapids Bridge</h4>
+          <p class="font-body text-[15px] text-ink/75 mt-3 leading-relaxed">A covered bridge over the South Fork of the Flambeau, deep in the Chequamegon. Cold, fast water below it; pine canopy above.</p>
+          <p class="font-mono text-[10px] text-ink/50 uppercase tracking-widest mt-5">45-min drive · Free</p>
+        </article>
+        <article class="bg-paper p-7 lg:p-9">
+          <p class="eyebrow text-pine">Park</p>
+          <h4 class="font-display text-2xl lg:text-3xl mt-2 text-navy" style="font-variation-settings:'opsz' 36,'SOFT' 60;">Solberg Lake County Park</h4>
+          <p class="font-body text-[15px] text-ink/75 mt-3 leading-relaxed">Sand beach, shaded grills, decent restrooms, a good fishing pier. A two-pontoon day usually ends here.</p>
+          <p class="font-mono text-[10px] text-ink/50 uppercase tracking-widest mt-5">10-min drive · $5 day-use</p>
+        </article>
+        <article class="bg-paper p-7 lg:p-9">
+          <p class="eyebrow text-pine">Supper</p>
+          <h4 class="font-display text-2xl lg:text-3xl mt-2 text-navy" style="font-variation-settings:'opsz' 36,'SOFT' 60;">Friday Fish Fry</h4>
+          <p class="font-body text-[15px] text-ink/75 mt-3 leading-relaxed">Northern Bar & Grill on Lake Avenue is the one we go to. Bluegill, walleye, perch — whatever's running. Old Fashioneds are the right call.</p>
+          <p class="font-mono text-[10px] text-ink/50 uppercase tracking-widest mt-5">Walking distance · Fri only</p>
+        </article>
+        <article class="bg-paper p-7 lg:p-9">
+          <p class="eyebrow text-pine">Forest</p>
+          <h4 class="font-display text-2xl lg:text-3xl mt-2 text-navy" style="font-variation-settings:'opsz' 36,'SOFT' 60;">Chequamegon-Nicolet</h4>
+          <p class="font-body text-[15px] text-ink/75 mt-3 leading-relaxed">1.5 million acres of national forest start ten minutes north of town. Old-growth hemlock, blueberries in late July, no cell signal.</p>
+          <p class="font-mono text-[10px] text-ink/50 uppercase tracking-widest mt-5">15-min drive · Free</p>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+<footer class="relative bg-navy-deep text-paper overflow-hidden">
+
+  <div class="max-w-[1440px] mx-auto px-6 lg:px-10 py-20 lg:py-24">
+
+    <div class="grid lg:grid-cols-12 gap-10 lg:gap-16">
+
+      <!-- Tagline + season note -->
+      <div class="lg:col-span-5">
+        <p class="eyebrow text-paper/55">Phillips Pontoon Co.</p>
+        <h3 class="font-display text-3xl lg:text-[40px] leading-[1.05] mt-4 tighter" style="font-variation-settings:'opsz' 60,'SOFT' 60;">
+          On the water from May&nbsp;15 through October&nbsp;15.
+        </h3>
+        <p class="font-body italic text-paper/75 mt-6 max-w-md leading-relaxed">
+          Family-run on Long Lake since 2026. Open all summer, closed for ice fishing season.
+        </p>
+      </div>
+
+      <!-- Cols -->
+      <div class="lg:col-span-7 grid sm:grid-cols-3 gap-10">
+        <div>
+          <p class="eyebrow text-paper/55">Explore</p>
+          <ul class="mt-4 space-y-2 font-body text-paper/90 text-[15px]">
+            <li><a href="fleet.html"  class="hover:text-paper transition">The Fleet</a></li>
+            <li><a href="book.html"   class="hover:text-paper transition">Book a Day</a></li>
+            <li><a href="waters.html" class="hover:text-paper transition">The Waters</a></li>
+            <li><a href="rules.html"  class="hover:text-paper transition">Rules of the Lake</a></li>
+            <li><a href="visit.html"  class="hover:text-paper transition">Plan a Visit</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="eyebrow text-paper/55">Find Us</p>
+          <ul class="mt-4 space-y-2 font-body text-paper/90 text-[15px] leading-relaxed">
+            <li>Phillips Pontoon Co.</li>
+            <li>N9580 E Solberg Lake Rd</li>
+            <li>Phillips, WI 54555</li>
+            <li class="pt-2"><a href="tel:+17155644355" class="hover:text-rust transition">715-564-4355</a></li>
+            <li><a href="mailto:bookings@phillipspontoonco.com" class="hover:text-rust transition">bookings@phillipspontoonco.com</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="eyebrow text-paper/55">Lake Mail</p>
+          <p class="font-body text-paper/80 text-[14px] mt-4 leading-relaxed">A short note before each long weekend. Weather, fish, open dates.</p>
+          <form class="mt-5" onsubmit="event.preventDefault(); this.querySelector('p').style.display='block'; this.querySelector('input').value='';">
+            <div class="flex border-b border-paper/30 focus-within:border-paper transition">
+              <input type="email" required placeholder="you@somewhere.com" class="flex-1 bg-transparent border-0 outline-none py-2 font-body text-[15px] text-paper placeholder:text-paper/40">
+              <button class="font-mono text-[11px] tracking-[0.18em] uppercase text-paper/85 hover:text-rust transition py-2">Send →</button>
+            </div>
+            <p class="hidden mt-3 text-[12px] font-mono text-rust/90">Got it. Welcome aboard.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-20 pt-8 border-t border-paper/15 flex flex-col md:flex-row gap-4 md:items-center md:justify-between text-[11px] font-mono tracking-widest uppercase text-paper/55">
+      <p>© 2026 Phillips Pontoon Co. · Family-owned, Wisconsin-rooted.</p>
+      <p>45.6953° N · 90.4040° W · Long Lake</p>
+    </div>
+  </div>
+</footer>
+
+<script>(function(){var t=document.getElementById('mobtoggle'),n=document.getElementById('mobnav');if(t&&n)t.addEventListener('click',function(){var o=n.classList.toggle('hidden');t.setAttribute('aria-expanded',String(!o));});})();</script>
+</body>
+</html>

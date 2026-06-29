@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Book a Day — Phillips Pontoon Co.</title>
+<meta name="description" content="Book a pontoon or fishing boat online at Phillips Pontoon Co." />
+<meta name="theme-color" content="#1A2B47" />
+<link rel="stylesheet" href="assets/site.css" />
+</head>
+<body class="bg-paper text-ink grain antialiased">
+<header class="sticky top-0 z-40 bg-paper/85 backdrop-blur-md border-b border-ink/10">
+  <nav class="max-w-[1440px] mx-auto px-6 lg:px-10 h-[68px] flex items-center justify-between gap-6">
+    <a href="index.html" class="flex items-center gap-3 group">
+      <img src="assets/img/logo.png" alt="Phillips Pontoon Co." class="h-12 w-12 object-contain">
+      <div class="leading-none">
+        <div class="font-display text-[17px] font-medium text-navy tracking-tight" style="font-variation-settings:'opsz' 24,'SOFT' 60;">Phillips Pontoon Co.</div>
+        <div class="eyebrow text-pine mt-1">Phillips · Wisconsin</div>
+      </div>
+    </a>
+    <ul class="hidden lg:flex items-center gap-8 text-[14px] font-body text-ink/80"><li><a href="fleet.html" class="hover:text-navy transition">The Fleet</a></li><li><a href="book.html" class="text-navy font-medium transition">Book a Day</a></li><li><a href="waters.html" class="hover:text-navy transition">The Waters</a></li><li><a href="rules.html" class="hover:text-navy transition">Rules of the Lake</a></li><li><a href="visit.html" class="hover:text-navy transition">Plan a Visit</a></li></ul>
+    <a href="book.html" class="hidden md:inline-flex btn-primary !py-2.5 !px-5 !text-[12px]">Reserve <span aria-hidden="true">→</span></a>
+    <button id="mobtoggle" class="lg:hidden text-navy" aria-label="Menu" aria-expanded="false">
+      <svg viewBox="0 0 24 24" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 7h18M3 12h18M3 17h18"/></svg>
+    </button>
+  </nav>
+  <div id="mobnav" class="hidden lg:hidden border-t border-ink/10 bg-paper px-6 py-4 font-body text-[15px]"><a href="fleet.html" class="block py-2 text-ink/80">The Fleet</a><a href="book.html" class="block py-2 text-navy font-medium">Book a Day</a><a href="waters.html" class="block py-2 text-ink/80">The Waters</a><a href="rules.html" class="block py-2 text-ink/80">Rules of the Lake</a><a href="visit.html" class="block py-2 text-ink/80">Plan a Visit</a>
+    <a href="book.html" class="block py-2 text-rust font-medium">Reserve a boat →</a>
+  </div>
+</header>
+<section id="book" class="relative py-24 lg:py-36 bg-navy text-paper overflow-hidden">
+  <!-- decorative topo lines -->
+  <svg class="absolute -right-32 top-12 w-[640px] h-[640px] opacity-[0.08] pointer-events-none" viewBox="0 0 600 600" aria-hidden="true">
+    <g fill="none" stroke="#F5EFE3" stroke-width="1">
+      <ellipse cx="300" cy="300" rx="80"  ry="55"/>
+      <ellipse cx="300" cy="300" rx="120" ry="80"/>
+      <ellipse cx="300" cy="300" rx="170" ry="115"/>
+      <ellipse cx="300" cy="300" rx="220" ry="145"/>
+      <ellipse cx="300" cy="300" rx="270" ry="175"/>
+    </g>
+  </svg>
+
+  <div class="relative max-w-[1440px] mx-auto px-6 lg:px-10 grid lg:grid-cols-12 gap-10 lg:gap-20 items-start">
+
+    <div class="lg:col-span-5">
+      <div class="chapter-num text-paper/25 text-[120px] lg:text-[200px]">02</div>
+      <p class="eyebrow text-paper/60 mt-4">Chapter Two</p>
+      <h2 class="font-display text-4xl lg:text-[56px] leading-[0.95] mt-3 tighter">Book Your Day</h2>
+      <div class="wave-rule light mt-7"></div>
+      <p class="font-body text-paper/80 mt-6 leading-relaxed max-w-md">
+        See what's open, pick your boat, and lock in your day. No phone tag, no waiting on us to write back. You book yourself, right here.
+      </p>
+
+      <ol class="mt-12 space-y-7 max-w-md">
+        <li class="grid grid-cols-[auto_1fr] gap-5 items-start">
+          <span class="font-display text-paper/60 text-3xl leading-none" style="font-variation-settings:'opsz' 36,'SOFT' 60;">01</span>
+          <div>
+            <p class="font-display text-lg text-paper" style="font-variation-settings:'opsz' 24,'SOFT' 60;">See what's open</p>
+            <p class="font-body text-paper/70 text-sm mt-1.5 leading-relaxed">Live calendar. Grab a single day or a whole weekend. Booked days grey themselves out.</p>
+          </div>
+        </li>
+        <li class="grid grid-cols-[auto_1fr] gap-5 items-start">
+          <span class="font-display text-paper/60 text-3xl leading-none" style="font-variation-settings:'opsz' 36,'SOFT' 60;">02</span>
+          <div>
+            <p class="font-display text-lg text-paper" style="font-variation-settings:'opsz' 24,'SOFT' 60;">Answer four quick questions</p>
+            <p class="font-body text-paper/70 text-sm mt-1.5 leading-relaxed">Boating experience, safety cert, docking. Takes about ten seconds.</p>
+          </div>
+        </li>
+        <li class="grid grid-cols-[auto_1fr] gap-5 items-start">
+          <span class="font-display text-paper/60 text-3xl leading-none" style="font-variation-settings:'opsz' 36,'SOFT' 60;">03</span>
+          <div>
+            <p class="font-display text-lg text-paper" style="font-variation-settings:'opsz' 24,'SOFT' 60;">Pay in full, waivers in your inbox</p>
+            <p class="font-body text-paper/70 text-sm mt-1.5 leading-relaxed">Full payment locks the boat. Your waivers email over to sign.</p>
+          </div>
+        </li>
+      </ol>
+
+      <!-- Behind the booking: the honest "how this runs live" panel -->
+      <div class="mt-12 pt-7 border-t border-paper/15 max-w-md">
+        <p class="eyebrow text-paper/55">Behind the booking</p>
+        <div class="mt-5 space-y-4">
+          <div class="ledger-row">
+            <svg class="w-5 h-5 text-rust mt-0.5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="5" width="18" height="16" rx="1"/><path d="M3 9h18M8 3v4M16 3v4"/></svg>
+            <div><p class="font-body text-paper text-[15px]">Live calendar</p><p class="font-body text-paper/60 text-sm leading-relaxed">Booked days lock out automatically. No double-booking, no checking with you first.</p></div>
+          </div>
+          <div class="ledger-row">
+            <svg class="w-5 h-5 text-rust mt-0.5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="10" width="16" height="11" rx="1.5"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
+            <div><p class="font-body text-paper text-[15px]">Secure payment + card hold</p><p class="font-body text-paper/60 text-sm leading-relaxed">Paid on an encrypted checkout the moment they book, with a card hold for any damage.</p></div>
+          </div>
+          <div class="ledger-row">
+            <svg class="w-5 h-5 text-rust mt-0.5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+            <div><p class="font-body text-paper text-[15px]">Tiered cancellation</p><p class="font-body text-paper/60 text-sm leading-relaxed">97% back 14+ days out, a rental voucher inside 14 days, nothing inside 72 hours. The system runs it, not you.</p></div>
+          </div>
+          <div class="ledger-row">
+            <svg class="w-5 h-5 text-rust mt-0.5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="5" width="18" height="14" rx="1.5"/><path d="M3 7l9 6 9-6"/></svg>
+            <div><p class="font-body text-paper text-[15px]">Waivers auto-sent</p><p class="font-body text-paper/60 text-sm leading-relaxed">The signing email goes out the second they book. Signed and on file before they launch.</p></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-10 pt-6 border-t border-paper/15 text-sm font-body text-paper/65 max-w-md leading-relaxed">
+        <p>Rather talk to a human?</p>
+        <p class="mt-1">Call or text <a href="tel:+17155644355" class="text-paper hover:text-rust transition underline underline-offset-4 decoration-paper/30">715-564-4355</a> · <span class="opacity-70">9 AM – 5 PM, in season</span></p>
+      </div>
+    </div>
+
+    <div class="lg:col-span-7">
+      <!-- ============================================================
+           SELF-SERVICE BOOKING WIDGET  (interactive showcase)
+           Previews the exact guest flow: see open dates, pick a boat,
+           clear the four-question water screen, drop a deposit. The
+           waivers email themselves after.
+
+           >> GOING LIVE <<
+           In production, this #booking-widget is swapped for the
+           embedded booking-engine snippet (FareHarbor / Checkfront /
+           Peek Pro). That engine runs the real-time calendar, the
+           encrypted payment + card hold, the tiered cancellation
+           refund logic, and the automated waiver e-sign email. Same
+           skin, real plumbing — a drop-in swap once the account is
+           live. Everything below is a faithful mock of that behavior.
+      ============================================================ -->
+      <div id="booking-widget" class="bg-paper text-ink relative" style="box-shadow: 0 40px 80px -40px rgba(0,0,0,0.5), 0 2px 0 0 rgba(0,0,0,0.05);">
+        <!-- corner stamp -->
+        <div class="absolute -top-4 -right-4 w-20 h-20 rotate-[8deg] flex items-center justify-center bg-rust text-paper font-mono text-[10px] tracking-widest uppercase text-center leading-tight border-2 border-rust-deep" style="box-shadow: 0 8px 20px -8px rgba(184,90,54,0.55);">
+          Book<br>it<br>yourself
+        </div>
+
+        <div class="p-8 lg:p-12">
+          <!-- header -->
+          <div class="flex items-baseline justify-between border-b border-ink/20 pb-5 mb-7">
+            <div>
+              <p class="eyebrow text-pine">Phillips Pontoon Co.</p>
+              <h3 class="font-display text-3xl text-navy mt-1" style="font-variation-settings:'opsz' 36,'SOFT' 60;">Book &amp; Pay</h3>
+            </div>
+            <div class="text-right">
+              <p class="font-mono text-[10px] text-ink/50 tracking-widest uppercase">Step</p>
+              <p class="font-mono text-sm text-ink/70"><span id="bk-stepnum">1</span> / 4</p>
+            </div>
+          </div>
+
+          <!-- progress dots -->
+          <div id="bk-progress" class="flex items-center gap-2 mb-8"></div>
+
+          <!-- STEP 1 · date + boat -->
+          <div class="bk-step active" data-step="1">
+            <p class="font-display text-xl text-navy" style="font-variation-settings:'opsz' 24,'SOFT' 60;">When do you want the water?</p>
+            <p class="font-body text-ink/60 text-sm mt-1.5 leading-relaxed">Tap your start date, then your end date. One afternoon or a whole weekend. Dotted days are already booked.</p>
+
+            <div class="mt-6 border border-ink/12 p-4">
+              <div class="flex items-center justify-between mb-3">
+                <button id="cal-prev" type="button" class="w-8 h-8 flex items-center justify-center text-ink/60 hover:text-navy hover:bg-navy/5 transition disabled:opacity-25 disabled:pointer-events-none" aria-label="Previous month">
+                  <svg class="w-4 h-4" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M10 3 5 8l5 5"/></svg>
+                </button>
+                <p id="cal-label" class="font-display text-lg text-navy" style="font-variation-settings:'opsz' 24,'SOFT' 60;"></p>
+                <button id="cal-next" type="button" class="w-8 h-8 flex items-center justify-center text-ink/60 hover:text-navy hover:bg-navy/5 transition disabled:opacity-25 disabled:pointer-events-none" aria-label="Next month">
+                  <svg class="w-4 h-4" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 3l5 5-5 5"/></svg>
+                </button>
+              </div>
+              <div class="cal-grid mb-1">
+                <div class="cal-dow">Su</div><div class="cal-dow">Mo</div><div class="cal-dow">Tu</div><div class="cal-dow">We</div><div class="cal-dow">Th</div><div class="cal-dow">Fr</div><div class="cal-dow">Sa</div>
+              </div>
+              <div id="cal-grid" class="cal-grid"></div>
+              <div class="flex items-center gap-4 mt-4 pt-3 border-t border-ink/10 font-mono text-[10px] tracking-wider uppercase text-ink/50">
+                <span class="flex items-center gap-1.5"><span class="w-3 h-3 border border-navy/40 inline-block"></span> Open</span>
+                <span class="flex items-center gap-1.5"><span class="w-3 h-3 inline-block bg-navy/15"></span> Your stay</span>
+                <span class="flex items-center gap-1.5"><span class="w-3 h-3 inline-block relative"><span class="absolute left-1/2 bottom-0.5 -translate-x-1/2 w-1 h-1 rounded-full bg-rust"></span></span> Booked</span>
+              </div>
+              <p class="mt-2.5 font-mono text-[11px] text-ink/60 tracking-wide">Dates: <span id="cal-selected" class="text-navy font-medium">—</span></p>
+            </div>
+
+            <p class="field-label block mt-7">Pick your boat</p>
+            <div class="grid gap-2.5 mt-3">
+              <button type="button" class="seg flex items-center justify-between" data-group="boat" data-field="boat" data-value="The Pontoon · 25' TMC" data-cap="15"><span>The Pontoon <span class="opacity-50">· 25' TMC</span></span><span class="font-mono text-xs opacity-60">seats 15</span></button>
+              <button type="button" class="seg flex items-center justify-between" data-group="boat" data-field="boat" data-value="The Fishing Boat · 18'9&quot; Ranger" data-cap="7"><span>The Fishing Boat <span class="opacity-50">· 18'9&quot; Ranger</span></span><span class="font-mono text-xs opacity-60">seats 5–7</span></button>
+            </div>
+          </div>
+
+          <!-- STEP 2 · window (adapts: single-day time slots vs multi-day daily rhythm) -->
+          <div class="bk-step" data-step="2">
+            <p id="bk-window-title" class="font-display text-xl text-navy" style="font-variation-settings:'opsz' 24,'SOFT' 60;">How long on the water?</p>
+            <p id="bk-window-sub" class="font-body text-ink/60 text-sm mt-1.5 leading-relaxed">Pick the window that fits your day.</p>
+
+            <!-- single-day time windows -->
+            <div id="bk-window-single" class="mt-6 space-y-4">
+              <div class="grid gap-2.5">
+                <button type="button" class="seg flex items-center justify-between" data-group="window" data-field="window" data-value="full"><span>Full day <span class="opacity-50">· 9 AM – 5 PM</span></span><span class="font-mono text-xs opacity-60">$250</span></button>
+                <button type="button" class="seg flex items-center justify-between" data-group="window" data-field="window" data-value="hourly"><span>By the hour <span class="opacity-50">· up to 4 hours</span></span><span class="font-mono text-xs opacity-60">$40/hr</span></button>
+              </div>
+              <div id="bk-hours" class="hidden">
+                <p class="field-label">How many hours?</p>
+                <div class="flex gap-2 mt-2">
+                  <button type="button" class="seg seg-sm text-center flex-1" data-group="hours" data-field="hours" data-value="1">1</button>
+                  <button type="button" class="seg seg-sm text-center flex-1" data-group="hours" data-field="hours" data-value="2">2</button>
+                  <button type="button" class="seg seg-sm text-center flex-1" data-group="hours" data-field="hours" data-value="3">3</button>
+                  <button type="button" class="seg seg-sm text-center flex-1" data-group="hours" data-field="hours" data-value="4">4</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- multi-day: keep the boat the whole stay; pickup vs delivery -->
+            <div id="bk-window-multi" class="mt-6 hidden space-y-5">
+              <div class="border border-ink/12 bg-navy/[0.03] p-5 flex gap-3 items-start">
+                <svg class="w-5 h-5 mt-0.5 shrink-0 text-pine" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s7-6.5 7-12a7 7 0 1 0-14 0c0 5.5 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>
+                <p id="bk-multi-info" class="font-body text-ink/80 text-[15px] leading-relaxed">The boat is yours for the whole stay. It comes back by 5 PM on <span id="bk-return-date" class="text-navy">your last day</span>.</p>
+              </div>
+              <div>
+                <p class="field-label">Getting the boat</p>
+                <div class="grid gap-2.5 mt-2">
+                  <button type="button" class="seg flex items-center justify-between" data-group="delivery" data-field="delivery" data-value="pickup"><span>Pick up at our place <span class="opacity-50">· N9580 E Solberg Lake Rd</span></span><span class="font-mono text-xs opacity-60">included</span></button>
+                  <button type="button" id="bk-delivery-btn" class="seg flex items-center justify-between" data-group="delivery" data-field="delivery" data-value="delivery"><span>We deliver to a landing <span class="opacity-50">· within 30 mi</span></span><span class="font-mono text-xs opacity-60">+$80</span></button>
+                </div>
+                <p id="bk-delivery-note" class="font-body text-ink/50 text-xs mt-2 leading-relaxed italic hidden">Delivery is available on rentals of three days or more.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- STEP 3 · water screen -->
+          <div class="bk-step" data-step="3">
+            <p class="font-display text-xl text-navy" style="font-variation-settings:'opsz' 24,'SOFT' 60;">A few quick questions</p>
+            <p class="font-body text-ink/60 text-sm mt-1.5 leading-relaxed">We ask that you've run a pontoon before. First time on one? Give us a call before you book and we'll help you out.</p>
+
+            <div class="mt-6 space-y-5">
+              <div>
+                <p class="field-label">Run a boat before?</p>
+                <div class="grid grid-cols-3 gap-2 mt-2">
+                  <button type="button" class="seg seg-sm text-center" data-group="q1" data-field="q1" data-value="Plenty">Plenty</button>
+                  <button type="button" class="seg seg-sm text-center" data-group="q1" data-field="q1" data-value="A little">A little</button>
+                  <button type="button" class="seg seg-sm text-center" data-group="q1" data-field="q1" data-value="First time">First time</button>
+                </div>
+              </div>
+              <div>
+                <p class="field-label">Wisconsin Boater Safety certificate?</p>
+                <div class="grid grid-cols-3 gap-2 mt-2">
+                  <button type="button" class="seg seg-sm text-center" data-group="q2" data-field="q2" data-value="Have one">Have one</button>
+                  <button type="button" class="seg seg-sm text-center" data-group="q2" data-field="q2" data-value="Don't yet">Don't yet</button>
+                  <button type="button" class="seg seg-sm text-center" data-group="q2" data-field="q2" data-value="Not sure">Not sure</button>
+                </div>
+                <p class="font-body text-ink/50 text-xs mt-2 leading-relaxed italic">Wisconsin requires it for anyone born on or after Jan 1, 1989 operating a motorboat. No cert yet? We'll point you to the online course.</p>
+              </div>
+              <div>
+                <p class="field-label">Comfortable docking?</p>
+                <div class="grid grid-cols-2 gap-2 mt-2">
+                  <button type="button" class="seg seg-sm text-center" data-group="q3" data-field="q3" data-value="I've got it">I've got it</button>
+                  <button type="button" class="seg seg-sm text-center" data-group="q3" data-field="q3" data-value="Show me at the dock">Show me at the dock</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- STEP 4 · details + deposit -->
+          <div class="bk-step" data-step="4">
+            <p class="font-display text-xl text-navy" style="font-variation-settings:'opsz' 24,'SOFT' 60;">Last bit, then you're set</p>
+
+            <div class="grid sm:grid-cols-2 gap-x-8 gap-y-5 mt-6">
+              <div><label class="field-label" for="bk-name">Your name</label><input class="field" id="bk-name" type="text" placeholder="First and last"></div>
+              <div><label class="field-label" for="bk-party">Party size</label><input class="field" id="bk-party" type="number" min="1" max="12" placeholder="e.g. 6"></div>
+              <div><label class="field-label" for="bk-phone">Phone</label><input class="field" id="bk-phone" type="tel" placeholder="(   )    -    "></div>
+              <div><label class="field-label" for="bk-email">Email — waivers go here</label><input class="field" id="bk-email" type="email" placeholder="you@somewhere.com"></div>
+            </div>
+
+            <!-- deposit summary -->
+            <div class="mt-8 bg-navy/[0.03] border border-ink/12 p-5">
+              <div class="space-y-2 font-body text-sm">
+                <div class="flex justify-between gap-4"><span class="text-ink/55">Boat</span><span id="sum-boat" class="text-ink text-right">—</span></div>
+                <div class="flex justify-between gap-4"><span class="text-ink/55">Dates</span><span id="sum-date" class="text-ink text-right">—</span></div>
+                <div class="flex justify-between gap-4"><span class="text-ink/55">Length</span><span id="sum-days" class="text-ink text-right">—</span></div>
+                <div class="flex justify-between gap-4"><span class="text-ink/55" id="sum-window-label">Window</span><span id="sum-window" class="text-ink text-right">—</span></div>
+                <div class="flex justify-between items-baseline gap-4 pt-3 mt-1 border-t border-ink/10"><span class="text-ink/55">Total</span><span id="sum-deposit" class="font-display text-2xl text-navy" style="font-variation-settings:'opsz' 36,'SOFT' 60;">—</span></div>
+              </div>
+              <p class="font-mono text-[10px] text-ink/50 tracking-wider uppercase mt-3">Paid in full at booking · plus tax · card hold for damage</p>
+            </div>
+
+            <!-- policy + secure note -->
+            <div class="mt-5 space-y-2.5 font-body text-sm text-ink/65 leading-relaxed">
+              <p class="flex gap-2.5"><svg class="w-4 h-4 mt-0.5 shrink-0 text-pine" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg> Cancel 14+ days out for a 97% refund (less a $25 fee). Inside 14 days it's a rental voucher; inside 72 hours, no refund.</p>
+              <p class="flex gap-2.5"><svg class="w-4 h-4 mt-0.5 shrink-0 text-pine" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="4" y="10" width="16" height="11" rx="1.5"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg> Card details are entered on the encrypted checkout. We never see or store the full number.</p>
+            </div>
+          </div>
+
+          <!-- STEP 5 · confirmation -->
+          <div class="bk-step" data-step="5">
+            <div class="text-center py-1">
+              <div class="w-14 h-14 mx-auto rounded-full bg-pine/10 flex items-center justify-center mb-5">
+                <svg class="w-7 h-7 text-pine" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M5 13l4 4L19 7"/></svg>
+              </div>
+              <p class="eyebrow text-pine">Booked</p>
+              <h3 class="font-display text-3xl lg:text-4xl text-navy mt-2" style="font-variation-settings:'opsz' 36,'SOFT' 60;">You're on the water.</h3>
+            </div>
+            <div class="mt-7 border border-ink/12 divide-y divide-ink/10 font-body text-sm">
+              <div class="flex justify-between gap-4 px-5 py-3"><span class="text-ink/55">Boat</span><span id="cf-boat" class="text-ink text-right">—</span></div>
+              <div class="flex justify-between gap-4 px-5 py-3"><span class="text-ink/55">Dates</span><span id="cf-date" class="text-ink text-right">—</span></div>
+              <div class="flex justify-between gap-4 px-5 py-3"><span class="text-ink/55">Length</span><span id="cf-days" class="text-ink text-right">—</span></div>
+              <div class="flex justify-between gap-4 px-5 py-3"><span class="text-ink/55" id="cf-window-label">Window</span><span id="cf-window" class="text-ink text-right">—</span></div>
+              <div class="flex justify-between gap-4 px-5 py-3"><span class="text-ink/55">Party</span><span id="cf-party" class="text-ink text-right">—</span></div>
+              <div class="flex justify-between gap-4 px-5 py-3 bg-navy/[0.03]"><span class="text-ink/55">Total</span><span id="cf-deposit" class="text-navy font-medium text-right">—</span></div>
+            </div>
+            <p class="font-body text-ink/75 mt-6 leading-relaxed">Your waivers are on the way to <span id="cf-email" class="text-navy">your email</span>. Sign them before you launch and you're cleared to cast off. We'll be in touch with your pickup or delivery details — plan to arrive about 15 minutes early for paperwork and a quick run-through.</p>
+            <p class="font-body italic text-ink/55 mt-5 text-sm">— Phillips Pontoon Co.</p>
+            <button type="button" id="bk-reset" class="mt-6 font-mono text-[11px] tracking-[0.16em] uppercase text-rust hover:text-rust-deep transition">Book another day →</button>
+          </div>
+
+          <!-- nav footer -->
+          <div id="bk-nav" class="mt-9 pt-6 border-t border-ink/15 flex items-center justify-between gap-4">
+            <button type="button" id="bk-back" class="bk-back" disabled>
+              <svg class="w-3.5 h-3.5" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M10 3 5 8l5 5"/></svg> Back
+            </button>
+            <div class="flex items-center gap-4">
+              <span id="bk-hint" class="font-mono text-[10px] text-ink/45 tracking-widest uppercase hidden sm:inline"></span>
+              <button type="button" id="bk-next" class="btn-stamp">
+                <span id="bk-next-label">Continue</span>
+                <svg class="w-4 h-4" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 8h12M9 3l5 5-5 5"/></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<footer class="relative bg-navy-deep text-paper overflow-hidden">
+
+  <div class="max-w-[1440px] mx-auto px-6 lg:px-10 py-20 lg:py-24">
+
+    <div class="grid lg:grid-cols-12 gap-10 lg:gap-16">
+
+      <!-- Tagline + season note -->
+      <div class="lg:col-span-5">
+        <p class="eyebrow text-paper/55">Phillips Pontoon Co.</p>
+        <h3 class="font-display text-3xl lg:text-[40px] leading-[1.05] mt-4 tighter" style="font-variation-settings:'opsz' 60,'SOFT' 60;">
+          On the water from May&nbsp;15 through October&nbsp;15.
+        </h3>
+        <p class="font-body italic text-paper/75 mt-6 max-w-md leading-relaxed">
+          Family-run on Long Lake since 2026. Open all summer, closed for ice fishing season.
+        </p>
+      </div>
+
+      <!-- Cols -->
+      <div class="lg:col-span-7 grid sm:grid-cols-3 gap-10">
+        <div>
+          <p class="eyebrow text-paper/55">Explore</p>
+          <ul class="mt-4 space-y-2 font-body text-paper/90 text-[15px]">
+            <li><a href="fleet.html"  class="hover:text-paper transition">The Fleet</a></li>
+            <li><a href="book.html"   class="hover:text-paper transition">Book a Day</a></li>
+            <li><a href="waters.html" class="hover:text-paper transition">The Waters</a></li>
+            <li><a href="rules.html"  class="hover:text-paper transition">Rules of the Lake</a></li>
+            <li><a href="visit.html"  class="hover:text-paper transition">Plan a Visit</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="eyebrow text-paper/55">Find Us</p>
+          <ul class="mt-4 space-y-2 font-body text-paper/90 text-[15px] leading-relaxed">
+            <li>Phillips Pontoon Co.</li>
+            <li>N9580 E Solberg Lake Rd</li>
+            <li>Phillips, WI 54555</li>
+            <li class="pt-2"><a href="tel:+17155644355" class="hover:text-rust transition">715-564-4355</a></li>
+            <li><a href="mailto:bookings@phillipspontoonco.com" class="hover:text-rust transition">bookings@phillipspontoonco.com</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="eyebrow text-paper/55">Lake Mail</p>
+          <p class="font-body text-paper/80 text-[14px] mt-4 leading-relaxed">A short note before each long weekend. Weather, fish, open dates.</p>
+          <form class="mt-5" onsubmit="event.preventDefault(); this.querySelector('p').style.display='block'; this.querySelector('input').value='';">
+            <div class="flex border-b border-paper/30 focus-within:border-paper transition">
+              <input type="email" required placeholder="you@somewhere.com" class="flex-1 bg-transparent border-0 outline-none py-2 font-body text-[15px] text-paper placeholder:text-paper/40">
+              <button class="font-mono text-[11px] tracking-[0.18em] uppercase text-paper/85 hover:text-rust transition py-2">Send →</button>
+            </div>
+            <p class="hidden mt-3 text-[12px] font-mono text-rust/90">Got it. Welcome aboard.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-20 pt-8 border-t border-paper/15 flex flex-col md:flex-row gap-4 md:items-center md:justify-between text-[11px] font-mono tracking-widest uppercase text-paper/55">
+      <p>© 2026 Phillips Pontoon Co. · Family-owned, Wisconsin-rooted.</p>
+      <p>45.6953° N · 90.4040° W · Long Lake</p>
+    </div>
+  </div>
+</footer>
+<script src="assets/booking.js"></script>
+<script>(function(){var t=document.getElementById('mobtoggle'),n=document.getElementById('mobnav');if(t&&n)t.addEventListener('click',function(){var o=n.classList.toggle('hidden');t.setAttribute('aria-expanded',String(!o));});})();</script>
+</body>
+</html>

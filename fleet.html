@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>The Fleet — Phillips Pontoon Co.</title>
+<meta name="description" content="The pontoon and the Ranger fishing boat at Phillips Pontoon Co." />
+<meta name="theme-color" content="#1A2B47" />
+<link rel="stylesheet" href="assets/site.css" />
+</head>
+<body class="bg-paper text-ink grain antialiased">
+<header class="sticky top-0 z-40 bg-paper/85 backdrop-blur-md border-b border-ink/10">
+  <nav class="max-w-[1440px] mx-auto px-6 lg:px-10 h-[68px] flex items-center justify-between gap-6">
+    <a href="index.html" class="flex items-center gap-3 group">
+      <img src="assets/img/logo.png" alt="Phillips Pontoon Co." class="h-12 w-12 object-contain">
+      <div class="leading-none">
+        <div class="font-display text-[17px] font-medium text-navy tracking-tight" style="font-variation-settings:'opsz' 24,'SOFT' 60;">Phillips Pontoon Co.</div>
+        <div class="eyebrow text-pine mt-1">Phillips · Wisconsin</div>
+      </div>
+    </a>
+    <ul class="hidden lg:flex items-center gap-8 text-[14px] font-body text-ink/80"><li><a href="fleet.html" class="text-navy font-medium transition">The Fleet</a></li><li><a href="book.html" class="hover:text-navy transition">Book a Day</a></li><li><a href="waters.html" class="hover:text-navy transition">The Waters</a></li><li><a href="rules.html" class="hover:text-navy transition">Rules of the Lake</a></li><li><a href="visit.html" class="hover:text-navy transition">Plan a Visit</a></li></ul>
+    <a href="book.html" class="hidden md:inline-flex btn-primary !py-2.5 !px-5 !text-[12px]">Reserve <span aria-hidden="true">→</span></a>
+    <button id="mobtoggle" class="lg:hidden text-navy" aria-label="Menu" aria-expanded="false">
+      <svg viewBox="0 0 24 24" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 7h18M3 12h18M3 17h18"/></svg>
+    </button>
+  </nav>
+  <div id="mobnav" class="hidden lg:hidden border-t border-ink/10 bg-paper px-6 py-4 font-body text-[15px]"><a href="fleet.html" class="block py-2 text-navy font-medium">The Fleet</a><a href="book.html" class="block py-2 text-ink/80">Book a Day</a><a href="waters.html" class="block py-2 text-ink/80">The Waters</a><a href="rules.html" class="block py-2 text-ink/80">Rules of the Lake</a><a href="visit.html" class="block py-2 text-ink/80">Plan a Visit</a>
+    <a href="book.html" class="block py-2 text-rust font-medium">Reserve a boat →</a>
+  </div>
+</header>
+<section id="fleet" class="relative py-24 lg:py-36">
+  <div class="max-w-[1440px] mx-auto px-6 lg:px-10">
+    <div class="grid lg:grid-cols-12 gap-10 lg:gap-16 items-start">
+
+      <div class="lg:col-span-4">
+        <div class="lg:sticky lg:top-32">
+          <div class="chapter-num text-pine/85 text-[120px] lg:text-[200px]">01</div>
+          <p class="eyebrow text-pine mt-4">Chapter One</p>
+          <h2 class="font-display text-4xl lg:text-[56px] leading-[0.95] mt-3 text-navy tighter">The Fleet</h2>
+          <div class="wave-rule mt-7"></div>
+          <p class="font-body text-ink/80 mt-6 leading-relaxed max-w-sm">
+            Two boats, ready for the water. Pick the one that fits the day you have in mind, and we'll have it fueled, life jackets aboard, and set for pickup.
+          </p>
+          <div class="hidden lg:block mt-10 dot-divider text-navy"></div>
+          <p class="hidden lg:block mt-6 font-body text-sm italic text-ink/60 leading-relaxed max-w-sm">
+            Your lake day starts here.<br>
+            <span class="not-italic eyebrow text-ink/40 mt-2 inline-block">— Phillips Pontoon Co.</span>
+          </p>
+        </div>
+      </div>
+
+      <div class="lg:col-span-8 grid sm:grid-cols-2 gap-5 lg:gap-6">
+        <!-- ── Pontoon ── -->
+        <article class="fleet-card bg-paper-warm/55 border border-ink/12 p-7 lg:p-9 flex flex-col">
+          <div class="aspect-[4/3] mb-7 overflow-hidden">
+            <img src="assets/img/pontoon.jpg" alt="Phillips Pontoon Co.'s 25-foot TMC pontoon on a Northwoods lake" class="w-full h-full object-cover" />
+          </div>
+          <div class="flex items-baseline justify-between">
+            <p class="eyebrow text-pine">No. 01</p>
+            <p class="font-mono text-[10px] text-ink/40 tracking-widest uppercase">1999 · 25' TMC</p>
+          </div>
+          <h3 class="font-display text-[28px] mt-2 text-navy" style="font-variation-settings:'opsz' 36,'SOFT' 60;">The Pontoon</h3>
+          <p class="font-body text-[15px] leading-relaxed mt-3 text-ink/75">
+            Twenty-five feet of Northwoods relaxation. Spacious seating, a shaded bimini top, swim ladder, radio, and plenty of room to cruise, fish, swim, or simply drift the day away with family and friends.
+          </p>
+          <dl class="mt-auto pt-7 grid grid-cols-3 gap-4 border-t border-ink/15">
+            <div><dt class="font-mono text-[9px] text-ink/50 tracking-widest uppercase mb-1">Seats</dt><dd class="font-display text-lg text-navy">15</dd></div>
+            <div><dt class="font-mono text-[9px] text-ink/50 tracking-widest uppercase mb-1">Length</dt><dd class="font-display text-lg text-navy">25'</dd></div>
+            <div><dt class="font-mono text-[9px] text-ink/50 tracking-widest uppercase mb-1">From</dt><dd class="font-display text-lg text-navy">$250/day</dd></div>
+          </dl>
+        </article>
+
+        <!-- ── Fishing Boat ── -->
+        <article class="fleet-card bg-paper-warm/55 border border-ink/12 p-7 lg:p-9 flex flex-col">
+          <div class="aspect-[4/3] mb-7 overflow-hidden">
+            <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9JzAgMCA0MDAgMzAwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzMwMCcgZmlsbD0nI0VGRTZEMicvPjxnIGZpbGw9J25vbmUnIHN0cm9rZT0nIzJFNEUzMycgc3Ryb2tlLXdpZHRoPScxLjQnIG9wYWNpdHk9JzAuNSc+PHBhdGggZD0nTTE1MCAxNjggcTUwIDI2IDEwMCAwJy8+PHBhdGggZD0nTTE1MCAxNjggbDggLTIyIGg4NCBsOCAyMicvPjxwYXRoIGQ9J00xOTIgMTQ2IHYtMTYnLz48L2c+PHRleHQgeD0nMjAwJyB5PScyMTAnIGZvbnQtZmFtaWx5PSdtb25vc3BhY2UnIGZvbnQtc2l6ZT0nMTMnIGxldHRlci1zcGFjaW5nPSczJyBmaWxsPScjMkU0RTMzJyB0ZXh0LWFuY2hvcj0nbWlkZGxlJz5QSE9UTyBDT01JTkcgU09PTjwvdGV4dD48L3N2Zz4=" alt="The Ranger fishing boat — photo coming soon" class="w-full h-full object-cover" />
+          </div>
+          <div class="flex items-baseline justify-between">
+            <p class="eyebrow text-pine">No. 02</p>
+            <p class="font-mono text-[10px] text-ink/40 tracking-widest uppercase">1998 · 18'9" Ranger</p>
+          </div>
+          <h3 class="font-display text-[28px] mt-2 text-navy" style="font-variation-settings:'opsz' 36,'SOFT' 60;">The Fishing Boat</h3>
+          <p class="font-body text-[15px] leading-relaxed mt-3 text-ink/75">
+            A dependable Ranger built for unforgettable mornings on the water. Equipped with a bow-mount trolling motor, fish finder, livewell, and plenty of storage for your gear — everything you need for a peaceful day chasing walleye, bass, and panfish on Wisconsin's Northwoods lakes.
+          </p>
+          <dl class="mt-auto pt-7 grid grid-cols-3 gap-4 border-t border-ink/15">
+            <div><dt class="font-mono text-[9px] text-ink/50 tracking-widest uppercase mb-1">Seats</dt><dd class="font-display text-lg text-navy">5–7</dd></div>
+            <div><dt class="font-mono text-[9px] text-ink/50 tracking-widest uppercase mb-1">Length</dt><dd class="font-display text-lg text-navy">18'9"</dd></div>
+            <div><dt class="font-mono text-[9px] text-ink/50 tracking-widest uppercase mb-1">From</dt><dd class="font-display text-lg text-navy">$250/day</dd></div>
+          </dl>
+        </article>
+
+        </div>
+    </div>
+
+    <!-- fleet bottom note -->
+    <div class="mt-16 lg:mt-24 max-w-3xl mx-auto text-center">
+      <div class="dot-divider text-navy"></div>
+      <p class="font-body text-sm italic text-ink/65 mt-6">
+        Every rental goes out with a life jacket for all 15, four anchors, and a tote of just-in-case extras (sunscreen, bug spray, wet wipes, dry bags, and more). Bring it back with a full tank and you're square.
+      </p>
+    </div>
+  </div>
+</section>
+<footer class="relative bg-navy-deep text-paper overflow-hidden">
+
+  <div class="max-w-[1440px] mx-auto px-6 lg:px-10 py-20 lg:py-24">
+
+    <div class="grid lg:grid-cols-12 gap-10 lg:gap-16">
+
+      <!-- Tagline + season note -->
+      <div class="lg:col-span-5">
+        <p class="eyebrow text-paper/55">Phillips Pontoon Co.</p>
+        <h3 class="font-display text-3xl lg:text-[40px] leading-[1.05] mt-4 tighter" style="font-variation-settings:'opsz' 60,'SOFT' 60;">
+          On the water from May&nbsp;15 through October&nbsp;15.
+        </h3>
+        <p class="font-body italic text-paper/75 mt-6 max-w-md leading-relaxed">
+          Family-run on Long Lake since 2026. Open all summer, closed for ice fishing season.
+        </p>
+      </div>
+
+      <!-- Cols -->
+      <div class="lg:col-span-7 grid sm:grid-cols-3 gap-10">
+        <div>
+          <p class="eyebrow text-paper/55">Explore</p>
+          <ul class="mt-4 space-y-2 font-body text-paper/90 text-[15px]">
+            <li><a href="fleet.html"  class="hover:text-paper transition">The Fleet</a></li>
+            <li><a href="book.html"   class="hover:text-paper transition">Book a Day</a></li>
+            <li><a href="waters.html" class="hover:text-paper transition">The Waters</a></li>
+            <li><a href="rules.html"  class="hover:text-paper transition">Rules of the Lake</a></li>
+            <li><a href="visit.html"  class="hover:text-paper transition">Plan a Visit</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="eyebrow text-paper/55">Find Us</p>
+          <ul class="mt-4 space-y-2 font-body text-paper/90 text-[15px] leading-relaxed">
+            <li>Phillips Pontoon Co.</li>
+            <li>N9580 E Solberg Lake Rd</li>
+            <li>Phillips, WI 54555</li>
+            <li class="pt-2"><a href="tel:+17155644355" class="hover:text-rust transition">715-564-4355</a></li>
+            <li><a href="mailto:bookings@phillipspontoonco.com" class="hover:text-rust transition">bookings@phillipspontoonco.com</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="eyebrow text-paper/55">Lake Mail</p>
+          <p class="font-body text-paper/80 text-[14px] mt-4 leading-relaxed">A short note before each long weekend. Weather, fish, open dates.</p>
+          <form class="mt-5" onsubmit="event.preventDefault(); this.querySelector('p').style.display='block'; this.querySelector('input').value='';">
+            <div class="flex border-b border-paper/30 focus-within:border-paper transition">
+              <input type="email" required placeholder="you@somewhere.com" class="flex-1 bg-transparent border-0 outline-none py-2 font-body text-[15px] text-paper placeholder:text-paper/40">
+              <button class="font-mono text-[11px] tracking-[0.18em] uppercase text-paper/85 hover:text-rust transition py-2">Send →</button>
+            </div>
+            <p class="hidden mt-3 text-[12px] font-mono text-rust/90">Got it. Welcome aboard.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-20 pt-8 border-t border-paper/15 flex flex-col md:flex-row gap-4 md:items-center md:justify-between text-[11px] font-mono tracking-widest uppercase text-paper/55">
+      <p>© 2026 Phillips Pontoon Co. · Family-owned, Wisconsin-rooted.</p>
+      <p>45.6953° N · 90.4040° W · Long Lake</p>
+    </div>
+  </div>
+</footer>
+
+<script>(function(){var t=document.getElementById('mobtoggle'),n=document.getElementById('mobnav');if(t&&n)t.addEventListener('click',function(){var o=n.classList.toggle('hidden');t.setAttribute('aria-expanded',String(!o));});})();</script>
+</body>
+</html>
