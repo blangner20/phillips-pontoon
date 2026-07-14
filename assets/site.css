@@ -405,3 +405,68 @@
   .bk-back:disabled { opacity: 0; pointer-events: none; }
 
   .ledger-row { display: grid; grid-template-columns: auto 1fr; gap: 0.85rem; align-items: start; }
+
+  /* ── Plan Your Visit: the plate ─────────────────────────────────────────────
+     Fills the empty columns 8-12 beside the chapter opener. The photo bleeds off
+     the right edge of the page and holds a crisp edge along the top and left.
+     Only the bottom is washed out in the paper colour, so the reflection and the
+     foreground water run off the picture and onto the page.
+
+     Why a wash and not a gradient mask: a mask has no idea what a boat is, so
+     feathering the edge would eat the hull and the reflection along with the
+     water. This paints the paper colour OVER the photo instead. The page
+     background is a flat #F5EFE3 and .grain is a fixed multiply overlay sitting
+     above everything, so the grain still runs across the faded region and the
+     result is identical to a true mask, with no compositing support to worry
+     about. Stops are rgba(245,239,227,0), not `transparent`, which would
+     interpolate through grey and leave a dirty halo.
+     ─────────────────────────────────────────────────────────────────────────── */
+  .visit-plate { position: relative; }
+
+  .visit-plate__frame {
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 4 / 5;
+  }
+
+  .visit-plate__photo {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .visit-plate__wash {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background:
+      /* Lower left: the open water spills off the left edge onto the page. An ellipse
+         anchored at the bottom-left corner, 58% tall, so the fade climbs the left edge
+         only as far as the waterline (~42% down) and stops. The treeline and sky above
+         it keep a crisp edge, which is what makes it read as water rather than as a
+         vignette. Its 24% horizontal reach also clears the loon (x=24.5%) and the bow
+         (x=32%), so both stay sharp. */
+      radial-gradient(ellipse 24% 58% at 0% 100%,
+          rgba(245,239,227,0.95) 0%, rgba(245,239,227,0.45) 42%, rgba(245,239,227,0) 100%),
+      /* Bottom: the reflection melts into the paper. Reaches 24% up from the bottom,
+         clearing the swim ladder at 75%, so the boat and the girl on it stay crisp. */
+      linear-gradient(to top, #F5EFE3 0%, rgba(245,239,227,0.90) 6%, rgba(245,239,227,0) 24%);
+  }
+
+  /* Desktop: run the plate off the right edge of the viewport, and lift it so its
+     top line sits with the chapter number. #visit clips sideways so the bleed can
+     never produce a horizontal scrollbar; it stays open vertically. */
+  @media (min-width: 1024px) {
+    .visit-plate {
+      width: calc(100% + 2.5rem + (100vw - min(100vw, 1440px)) / 2);
+      margin-top: -1.5rem;
+    }
+  }
+
+  /* Phones: full bleed edge to edge, cancelling the container's px-6. */
+  @media (max-width: 1023px) {
+    .visit-plate { margin: 2.5rem -1.5rem 0; }
+  }
+
+  #visit { overflow-x: clip; overflow-y: visible; }
