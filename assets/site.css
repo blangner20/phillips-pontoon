@@ -454,12 +454,21 @@
       linear-gradient(to top, #F5EFE3 0%, rgba(245,239,227,0.90) 6%, rgba(245,239,227,0) 24%);
   }
 
-  /* Desktop: run the plate off the right edge of the viewport, and lift it so its
-     top line sits with the chapter number. #visit clips sideways so the bleed can
-     never produce a horizontal scrollbar; it stays open vertically. */
+  /* Desktop: a fixed-size plate, right-aligned in its columns, running off the edge
+     of the page. #visit clips sideways so that bleed can never produce a horizontal
+     scrollbar; it stays open vertically.
+
+     --plate-w is the only dial. Height follows from the 4:5 frame. It used to be
+     sized off the viewport, which meant it grew without limit: 577x721 on a 1440
+     screen but 823x1029 on a 1920 one, towering over a ~470px text column. Pinning
+     it means it holds the same size on every monitor, and at 420px the 928px source
+     renders at 2.2x, so it is retina-sharp with no bigger file needed. */
   @media (min-width: 1024px) {
     .visit-plate {
-      width: calc(100% + 2.5rem + (100vw - min(100vw, 1440px)) / 2);
+      --plate-w: 420px;
+      width: var(--plate-w);
+      margin-left: auto;        /* hug the right of its columns */
+      margin-right: -2.5rem;    /* cancel the container's px-10 and sit on its outer edge */
       margin-top: -1.5rem;
     }
   }
