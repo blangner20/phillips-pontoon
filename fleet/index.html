@@ -21,7 +21,10 @@
       </div>
     </a>
     <ul class="hidden lg:flex items-center gap-8 text-[14px] font-body text-ink/80"><li><a href="/fleet/" class="text-navy font-medium transition">The Fleet</a></li><li><a href="/book/" class="hover:text-navy transition">Book a Day</a></li><li><a href="/waters/" class="hover:text-navy transition">The Waters</a></li><li><a href="/rules/" class="hover:text-navy transition">Rules of the Lake</a></li><li><a href="/visit/" class="hover:text-navy transition">Plan a Visit</a></li></ul>
-    <a href="/book/" class="hidden md:inline-flex btn-primary !py-2.5 !px-5 !text-[12px]">Reserve <span aria-hidden="true">→</span></a>
+    <!-- !hidden / md:!inline-flex: .btn-primary sets display:flex and custom CSS is
+         appended after Tailwind in site.css, so a plain .hidden loses the cascade and
+         the button used to show on phones, crushing the brand lockup. -->
+    <a href="/book/" class="!hidden md:!inline-flex btn-primary !py-2.5 !px-5 !text-[12px]">Reserve <span aria-hidden="true">→</span></a>
     <button id="mobtoggle" class="lg:hidden text-navy" aria-label="Menu" aria-expanded="false">
       <svg viewBox="0 0 24 24" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 7h18M3 12h18M3 17h18"/></svg>
     </button>
@@ -70,7 +73,7 @@
             <div><dt class="font-mono text-[9px] text-ink/50 tracking-widest uppercase mb-1">Length</dt><dd class="font-display text-lg text-navy">25'</dd></div>
             <div><dt class="font-mono text-[9px] text-ink/50 tracking-widest uppercase mb-1">From</dt><dd class="font-display text-lg text-navy">$250/day</dd></div>
           </dl>
-          <a href="/book/" data-prefill-boat="pontoon" class="mt-6 flex items-center justify-center gap-2 border border-rust/40 text-rust hover:bg-rust hover:text-paper transition-colors py-3 font-mono text-[11px] tracking-[0.2em] uppercase">Book this boat <span aria-hidden="true">→</span></a>
+          <a href="/book/" class="mt-6 flex items-center justify-center gap-2 border border-rust/40 text-rust hover:bg-rust hover:text-paper transition-colors py-3 font-mono text-[11px] tracking-[0.2em] uppercase">Book this boat <span aria-hidden="true">→</span></a>
         </article>
 
         <!-- ── Fishing Boat ── -->
@@ -91,7 +94,7 @@
             <div><dt class="font-mono text-[9px] text-ink/50 tracking-widest uppercase mb-1">Length</dt><dd class="font-display text-lg text-navy">18'9"</dd></div>
             <div><dt class="font-mono text-[9px] text-ink/50 tracking-widest uppercase mb-1">From</dt><dd class="font-display text-lg text-navy">$150/day</dd></div>
           </dl>
-          <a href="/book/" data-prefill-boat="fishing" class="mt-6 flex items-center justify-center gap-2 border border-rust/40 text-rust hover:bg-rust hover:text-paper transition-colors py-3 font-mono text-[11px] tracking-[0.2em] uppercase">Book this boat <span aria-hidden="true">→</span></a>
+          <a href="/book/" class="mt-6 flex items-center justify-center gap-2 border border-rust/40 text-rust hover:bg-rust hover:text-paper transition-colors py-3 font-mono text-[11px] tracking-[0.2em] uppercase">Book this boat <span aria-hidden="true">→</span></a>
         </article>
 
         </div>
@@ -106,16 +109,6 @@
     </div>
   </div>
 
-  <script>(function(){
-    document.querySelectorAll('[data-prefill-boat]').forEach(function(b){
-      b.addEventListener('click',function(){
-        var k=b.getAttribute('data-prefill-boat');
-        var seg=document.querySelector('.seg[data-boat="'+k+'"]');
-        if(seg){ seg.click(); }
-        else { try{ sessionStorage.setItem('ppc_boat', k); }catch(e){} }
-      });
-    });
-  })();</script>
 </section>
 <footer class="relative bg-navy-deep text-paper overflow-hidden">
 

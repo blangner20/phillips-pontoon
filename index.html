@@ -21,7 +21,10 @@
       </div>
     </a>
     <ul class="hidden lg:flex items-center gap-8 text-[14px] font-body text-ink/80"><li><a href="/fleet/" class="hover:text-navy transition">The Fleet</a></li><li><a href="/book/" class="hover:text-navy transition">Book a Day</a></li><li><a href="/waters/" class="hover:text-navy transition">The Waters</a></li><li><a href="/rules/" class="hover:text-navy transition">Rules of the Lake</a></li><li><a href="/visit/" class="hover:text-navy transition">Plan a Visit</a></li></ul>
-    <a href="/book/" class="hidden md:inline-flex btn-primary !py-2.5 !px-5 !text-[12px]">Reserve <span aria-hidden="true">→</span></a>
+    <!-- !hidden / md:!inline-flex: .btn-primary sets display:flex and custom CSS is
+         appended after Tailwind in site.css, so a plain .hidden loses the cascade and
+         the button used to show on phones, crushing the brand lockup. -->
+    <a href="/book/" class="!hidden md:!inline-flex btn-primary !py-2.5 !px-5 !text-[12px]">Reserve <span aria-hidden="true">→</span></a>
     <button id="mobtoggle" class="lg:hidden text-navy" aria-label="Menu" aria-expanded="false">
       <svg viewBox="0 0 24 24" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 7h18M3 12h18M3 17h18"/></svg>
     </button>
@@ -129,11 +132,11 @@
 <section class="relative py-20 lg:py-28 bg-paper">
   <div class="max-w-[1100px] mx-auto px-6 lg:px-10 text-center">
     <p class="eyebrow text-pine">Phillips, Wisconsin</p>
-    <h2 class="font-display text-3xl lg:text-[44px] leading-[1.05] mt-4 text-navy tighter">Two boats, the Northwoods lakes,<br>and a day that books itself.</h2>
-    <p class="font-body text-lg text-ink/80 mt-6 max-w-2xl mx-auto leading-relaxed">A 25-foot pontoon and an 18-foot Ranger, delivered to the water or picked up at our place. See what's open, answer a few quick questions, and lock in your day online.</p>
+    <h2 class="font-display text-3xl lg:text-[44px] leading-[1.05] mt-4 text-navy tighter">Two boats, the Northwoods lakes,<br>and a day on the water.</h2>
+    <p class="font-body text-lg text-ink/80 mt-6 max-w-2xl mx-auto leading-relaxed">A 25-foot pontoon and an 18-foot Ranger, delivered to the water or picked up at our place. Call, text, or email us and we'll get you booked.</p>
     <div class="mt-12 grid sm:grid-cols-3 gap-5 text-left">
       <a href="/fleet/" class="fleet-card bg-paper-warm/55 border border-ink/12 p-7 block"><p class="eyebrow text-pine">01</p><h3 class="font-display text-2xl text-navy mt-2" style="font-variation-settings:'opsz' 36,'SOFT' 60;">The Fleet</h3><p class="font-body text-[15px] text-ink/75 mt-2 leading-relaxed">Meet the pontoon and the Ranger.</p></a>
-      <a href="/book/" class="fleet-card bg-paper-warm/55 border border-ink/12 p-7 block"><p class="eyebrow text-pine">02</p><h3 class="font-display text-2xl text-navy mt-2" style="font-variation-settings:'opsz' 36,'SOFT' 60;">Book a Day</h3><p class="font-body text-[15px] text-ink/75 mt-2 leading-relaxed">Live calendar, real prices, done online.</p></a>
+      <a href="/book/" class="fleet-card bg-paper-warm/55 border border-ink/12 p-7 block"><p class="eyebrow text-pine">02</p><h3 class="font-display text-2xl text-navy mt-2" style="font-variation-settings:'opsz' 36,'SOFT' 60;">Book a Day</h3><p class="font-body text-[15px] text-ink/75 mt-2 leading-relaxed">Call, text, or email to reserve your day.</p></a>
       <a href="/waters/" class="fleet-card bg-paper-warm/55 border border-ink/12 p-7 block"><p class="eyebrow text-pine">03</p><h3 class="font-display text-2xl text-navy mt-2" style="font-variation-settings:'opsz' 36,'SOFT' 60;">The Waters</h3><p class="font-body text-[15px] text-ink/75 mt-2 leading-relaxed">Five lakes, where to cruise and fish.</p></a>
     </div>
   </div>

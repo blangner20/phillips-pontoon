@@ -21,7 +21,10 @@
       </div>
     </a>
     <ul class="hidden lg:flex items-center gap-8 text-[14px] font-body text-ink/80"><li><a href="/fleet/" class="hover:text-navy transition">The Fleet</a></li><li><a href="/book/" class="hover:text-navy transition">Book a Day</a></li><li><a href="/waters/" class="hover:text-navy transition">The Waters</a></li><li><a href="/rules/" class="text-navy font-medium transition">Rules of the Lake</a></li><li><a href="/visit/" class="hover:text-navy transition">Plan a Visit</a></li></ul>
-    <a href="/book/" class="hidden md:inline-flex btn-primary !py-2.5 !px-5 !text-[12px]">Reserve <span aria-hidden="true">→</span></a>
+    <!-- !hidden / md:!inline-flex: .btn-primary sets display:flex and custom CSS is
+         appended after Tailwind in site.css, so a plain .hidden loses the cascade and
+         the button used to show on phones, crushing the brand lockup. -->
+    <a href="/book/" class="!hidden md:!inline-flex btn-primary !py-2.5 !px-5 !text-[12px]">Reserve <span aria-hidden="true">→</span></a>
     <button id="mobtoggle" class="lg:hidden text-navy" aria-label="Menu" aria-expanded="false">
       <svg viewBox="0 0 24 24" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 7h18M3 12h18M3 17h18"/></svg>
     </button>
