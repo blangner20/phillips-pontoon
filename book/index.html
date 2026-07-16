@@ -115,10 +115,7 @@
             <h3 class="font-display text-3xl text-navy mt-1" style="font-variation-settings:'opsz' 36,'SOFT' 60;">Join the list</h3>
           </div>
 
-          <!-- hidden sink: the POST lands here so the page never navigates away -->
-          <iframe name="wl-sink" id="wl-sink" title="" aria-hidden="true" tabindex="-1" style="display:none"></iframe>
-
-          <form id="wl-form" class="wl-form" action="https://assets.mailerlite.com/jsonp/2512753/forms/193108855220078478/subscribe" method="post" target="wl-sink" novalidate>
+          <form id="wl-form" class="wl-form" action="https://assets.mailerlite.com/jsonp/2512753/forms/193108855220078478/subscribe" method="post" novalidate>
             <div class="grid sm:grid-cols-2 gap-6">
               <div>
                 <label class="field-label" for="wl-name">First name <span class="opacity-50">(optional)</span></label>
@@ -173,30 +170,30 @@
               err   = document.getElementById('wl-error'),
               btn   = document.getElementById('wl-submit'),
               lbl   = document.getElementById('wl-submit-label'),
-              sink  = document.getElementById('wl-sink'),
-              ok    = document.getElementById('wl-success'),
-              submitted = false, done = false;
+              ok    = document.getElementById('wl-success');
           function showErr(m) { err.textContent = m; err.classList.remove('hidden'); }
-          function valid(v) { return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v); }
-          function succeed() {
-            if (done) return;
-            done = true;
-            f.classList.add('hidden');
-            ok.classList.remove('hidden');
-          }
+          function reset()    { btn.disabled = false; lbl.textContent = 'Join the List'; }
+          function valid(v)   { return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v); }
+          var FALLBACK = 'Something went wrong. Please try again, or text 715-564-4355.';
           f.addEventListener('submit', function (e) {
+            e.preventDefault();
             err.classList.add('hidden');
             var v = (email.value || '').trim();
-            if (!valid(v)) { e.preventDefault(); showErr('Please enter a valid email address.'); email.focus(); return; }
-            // valid: let the form POST to the hidden iframe (no page navigation).
-            submitted = true;
-            btn.disabled = true;
-            lbl.textContent = 'Adding you...';
-            // Show success when the iframe responds; fall back after 2.5s in case
-            // the response is frame-blocked (the POST still reached MailerLite).
-            setTimeout(succeed, 2500);
+            if (!valid(v)) { showErr('Please enter a valid email address.'); email.focus(); return; }
+            btn.disabled = true; lbl.textContent = 'Adding you...';
+            // MailerLite's subscribe endpoint is CORS-open and returns JSON, so we
+            // read the real answer and only celebrate on {"success":true}.
+            fetch(f.action, { method: 'POST', body: new FormData(f) })
+              .then(function (r) { return r.json().catch(function () { return { success: false }; }); })
+              .then(function (j) {
+                if (j && j.success) { f.classList.add('hidden'); ok.classList.remove('hidden'); return; }
+                reset();
+                var msg = FALLBACK;
+                if (j && j.errors && j.errors.fields && j.errors.fields.email) { msg = j.errors.fields.email[0]; }
+                showErr(msg);
+              })
+              .catch(function () { reset(); showErr(FALLBACK); });
           });
-          sink.addEventListener('load', function () { if (submitted) succeed(); });
         })();
       </script>
     </div>
