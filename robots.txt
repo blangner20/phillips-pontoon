@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+# Unlisted staging copy of the booking page. Superseded by /book/.
+Disallow: /booking-preview-7f3q9k2m8w4x/
+
+Sitemap: https://phillipspontoonco.com/sitemap.xml
