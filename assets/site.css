@@ -216,12 +216,14 @@
   }
 
   .wave-rule {
-    width: 64px;
-    height: 12px;
-    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 12'><path d='M0 6 Q 8 0, 16 6 T 32 6 T 48 6 T 64 6' stroke='%231A2B47' stroke-width='1.2' fill='none' opacity='0.55'/></svg>");
+    width: 80px;
+    height: 14px;
+    background-image: url("/assets/img/rule-navy.png?v=111d00ba4e");
+    background-size: contain;
+    background-position: left center;
     background-repeat: no-repeat;
   }
-  .wave-rule.light { filter: invert(1) brightness(2); opacity: 0.7; }
+  .wave-rule.light { background-image: url("/assets/img/rule-cream.png?v=e81cd9dd30"); opacity: 0.75; }
 
   @keyframes rise {
     from { opacity: 0; transform: translateY(24px); }
