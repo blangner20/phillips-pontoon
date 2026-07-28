@@ -109,7 +109,9 @@
            live but demoted to the secondary Lake Mail block below.
       ============================================================ -->
       <div id="book-now" class="bg-paper text-ink relative" style="box-shadow: 0 40px 80px -40px rgba(0,0,0,0.5), 0 2px 0 0 rgba(0,0,0,0.05);">
-        <div class="bg-rust/10 border-b border-rust/25 px-7 lg:px-9 py-4">
+        <!-- padding-right reserves the corner-stamp zone (80px stamp hanging 16px
+             outside the card, plus rotation) so the banner text never runs under it -->
+        <div class="bg-rust/10 border-b border-rust/25 px-7 lg:px-9 py-4" style="padding-right:104px">
           <p class="font-mono text-[10px] tracking-[0.18em] uppercase text-rust-deep">Book online</p>
           <p class="font-body text-sm text-ink/75 mt-1.5 leading-relaxed">Choose a boat to open the live calendar. You pick your time and pay right here on this page, and the waiver comes by email to sign.</p>
         </div>
