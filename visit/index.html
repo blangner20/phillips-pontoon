@@ -8,7 +8,8 @@
 <meta name="theme-color" content="#1A2B47" />
 <link rel="icon" type="image/png" href="/assets/img/favicon.png?v=02477ecf2f" />
 <link rel="apple-touch-icon" href="/assets/img/favicon.png?v=02477ecf2f" />
-<link rel="stylesheet" href="/assets/site.css?v=dff257dace" />
+<link rel="stylesheet" href="/assets/site.css?v=20261018-opt1" />
+<script src="/assets/site.js?v=20261018-opt1" defer></script>
 <!-- seo:begin -->
 <link rel="canonical" href="https://phillipspontoonco.com/visit/" />
 <meta property="og:type" content="website" />
@@ -26,8 +27,9 @@
 <!-- seo:end -->
 </head>
 <body class="bg-paper text-ink grain antialiased">
+<a class="skip-link" href="#main-content">Skip to content</a>
 <header class="sticky top-0 z-40 bg-paper/85 backdrop-blur-md border-b border-ink/10">
-  <nav class="max-w-[1440px] mx-auto px-6 lg:px-10 h-[68px] flex items-center justify-between gap-6">
+  <nav class="max-w-[1440px] mx-auto px-6 lg:px-10 h-[68px] flex items-center justify-between gap-6" aria-label="Primary navigation">
     <a href="/" class="flex items-center gap-3 group">
       <img src="/assets/img/logo.png?v=944ca91017" alt="Phillips Pontoon Co." class="h-12 w-12 object-contain">
       <div class="leading-none">
@@ -35,19 +37,20 @@
         <div class="eyebrow text-pine mt-1">Phillips · Wisconsin</div>
       </div>
     </a>
-    <ul class="hidden lg:flex items-center gap-8 text-[14px] font-body text-ink/80"><li><a href="/fleet/" class="hover:text-navy transition">The Fleet</a></li><li><a href="/book/" class="hover:text-navy transition">Book</a></li><li><a href="/waters/" class="hover:text-navy transition">The Waters</a></li><li><a href="/rules/" class="hover:text-navy transition">Rules of the Lake</a></li><li><a href="/visit/" class="text-navy font-medium transition">Plan a Visit</a></li></ul>
+    <ul class="hidden lg:flex items-center gap-8 text-[14px] font-body text-ink/80"><li><a href="/fleet/" class="hover:text-navy transition">The Fleet</a></li><li><a href="/book/" class="hover:text-navy transition">Book</a></li><li><a href="/waters/" class="hover:text-navy transition">The Waters</a></li><li><a href="/rules/" class="hover:text-navy transition">Rules of the Lake</a></li><li><a href="/visit/" class="text-navy font-medium transition" aria-current="page">Plan a Visit</a></li></ul>
     <!-- !hidden / md:!inline-flex: .btn-primary sets display:flex and custom CSS is
          appended after Tailwind in site.css, so a plain .hidden loses the cascade and
          the button used to show on phones, crushing the brand lockup. -->
     <a href="/book/" class="!hidden md:!inline-flex btn-primary !py-2.5 !px-5 !text-[12px]">Book a Boat <span aria-hidden="true">→</span></a>
-    <button id="mobtoggle" class="lg:hidden text-navy" aria-label="Menu" aria-expanded="false">
+    <button id="mobtoggle" class="lg:hidden text-navy" type="button" aria-label="Open menu" aria-controls="mobnav" aria-expanded="false">
       <svg viewBox="0 0 24 24" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 7h18M3 12h18M3 17h18"/></svg>
     </button>
   </nav>
-  <div id="mobnav" class="hidden lg:hidden border-t border-ink/10 bg-paper px-6 py-4 font-body text-[15px]"><a href="/fleet/" class="block py-2 text-ink/80">The Fleet</a><a href="/book/" class="block py-2 text-ink/80">Book</a><a href="/waters/" class="block py-2 text-ink/80">The Waters</a><a href="/rules/" class="block py-2 text-ink/80">Rules of the Lake</a><a href="/visit/" class="block py-2 text-navy font-medium">Plan a Visit</a>
+  <div id="mobnav" role="navigation" aria-label="Mobile navigation" class="hidden lg:hidden border-t border-ink/10 bg-paper px-6 py-4 font-body text-[15px]"><a href="/fleet/" class="block py-2 text-ink/80">The Fleet</a><a href="/book/" class="block py-2 text-ink/80">Book</a><a href="/waters/" class="block py-2 text-ink/80">The Waters</a><a href="/rules/" class="block py-2 text-ink/80">Rules of the Lake</a><a href="/visit/" class="block py-2 text-navy font-medium" aria-current="page">Plan a Visit</a>
     <a href="/book/" class="block py-2 text-rust font-medium">Book a boat →</a>
   </div>
 </header>
+<main id="main-content" tabindex="-1">
 <section id="visit" class="relative py-24 lg:py-36">
   <div class="max-w-[1440px] mx-auto px-6 lg:px-10">
 
@@ -55,7 +58,7 @@
       <div class="lg:col-span-7">
         <div class="chapter-num text-pine/85 text-[120px] lg:text-[200px]">05</div>
         <p class="eyebrow text-pine mt-4">Chapter Five</p>
-        <h2 class="font-display text-4xl lg:text-[56px] leading-[0.95] mt-3 text-navy tighter">Plan Your Visit</h2>
+        <h1 class="font-display text-4xl lg:text-[56px] leading-[0.95] mt-3 text-navy tighter">Plan Your Visit</h1>
         <div class="wave-rule mt-7"></div>
         <p class="font-body text-lg leading-relaxed text-ink/85 max-w-xl mt-7">
           Both boats are delivery only. We bring the boat to your lake and collect it at the end of your rental. One $80 fee per booking covers both trips and is added at checkout. Your rental agreement and waiver are emailed to you when you book and signed online. The only paper left is our insurer's safety checklist, signed at the dock by everyone riding.
@@ -91,7 +94,7 @@
             <span class="font-display text-[40px] leading-none text-rust-deep" style="font-variation-settings:'opsz' 60,'SOFT' 60;">$80</span>
             <span class="font-body text-[15px] text-ink/80">per booking, covering delivery and collection</span>
           </div>
-          <p class="font-body text-[15px] text-ink/75 mt-5 leading-relaxed">This required fee is added once per booking at checkout. Like the boat rates, it is before Wisconsin sales tax of 5.5%.</p>
+          <p class="font-body text-[15px] text-ink/75 mt-5 leading-relaxed">This required fee is added once per booking at checkout. Like the boat rates, it is before Wisconsin sales tax of 5.5%. A FareHarbor booking fee is also added at checkout.</p>
           <ul class="mt-5 divide-y divide-ink/15">
             <li class="py-3 grid grid-cols-[1.5rem_1fr] gap-3 items-start"><span class="font-mono text-[10px] text-pine/70 mt-1.5">01</span><p class="font-body text-[15px] text-ink/80 leading-relaxed">We deliver to lakes within 30 miles of Phillips.</p></li>
             <li class="py-3 grid grid-cols-[1.5rem_1fr] gap-3 items-start"><span class="font-mono text-[10px] text-pine/70 mt-1.5">02</span><p class="font-body text-[15px] text-ink/80 leading-relaxed">Monday through Thursday, delivery may not be available until after 4:00 p.m.</p></li>
@@ -131,7 +134,7 @@
             <span class="font-mono text-[10px] text-pine/70 mt-2">02</span>
             <div>
               <img src="/assets/img/icon-card.png?v=8d78f05440" alt="" loading="lazy" style="float:right;width:46px;height:46px;object-fit:contain;margin:0 0 6px 14px;opacity:.9" /><p class="font-display text-lg text-navy" style="font-variation-settings:'opsz' 24,'SOFT' 60;">A credit card for the deposit</p>
-              <p class="font-body text-[15px] text-ink/75 mt-1 leading-relaxed">The security deposit is a 100% hold on the card on file.</p>
+              <p class="font-body text-[15px] text-ink/75 mt-1 leading-relaxed">A credit card authorization is required before the boat goes out. Your rental agreement sets out the security deposit and your responsibility for damage.</p>
             </div>
           </li>
           <li class="py-5 grid grid-cols-[1.5rem_1fr] gap-3 items-start">
@@ -171,7 +174,7 @@
             <a href="mailto:bookings@phillipspontoonco.com" class="font-display text-lg break-all text-navy hover:text-rust transition block mt-2" style="font-variation-settings:'opsz' 24,'SOFT' 60;">
               bookings@phillipspontoonco.com
             </a>
-            <p class="font-mono text-[10px] text-ink/50 tracking-widest uppercase mt-1">Replies within a day</p>
+            <p class="font-mono text-[10px] text-ink/50 tracking-widest uppercase mt-1">Call or text <a href="tel:+17155644355" class="underline underline-offset-2 hover:text-rust">715-564-4355</a></p>
           </div>
         </div>
 
@@ -181,6 +184,8 @@
             <tbody>
               <tr class="border-b border-ink/10"><td class="py-2">2027 season</td><td class="py-2 text-right font-mono text-sm whitespace-nowrap">May 8 – Oct 10</td></tr>
               <tr class="border-b border-ink/10"><td class="py-2">Pontoon, full day</td><td class="py-2 text-right font-mono text-sm whitespace-nowrap">9 AM – 5 PM</td></tr>
+              <tr class="border-b border-ink/10"><td class="py-2">Pontoon, morning half day</td><td class="py-2 text-right font-mono text-sm whitespace-nowrap">9 AM – 1 PM</td></tr>
+              <tr class="border-b border-ink/10"><td class="py-2">Pontoon, afternoon half day</td><td class="py-2 text-right font-mono text-sm whitespace-nowrap">2 PM – 6 PM</td></tr>
               <tr class="border-b border-ink/10"><td class="py-2">Ranger, morning</td><td class="py-2 text-right font-mono text-sm whitespace-nowrap">5:30 AM – 12:30 PM</td></tr>
               <tr class="border-b border-ink/10"><td class="py-2">Ranger, afternoon</td><td class="py-2 text-right font-mono text-sm whitespace-nowrap">1:30 PM – 8:30 PM</td></tr>
               <tr><td class="py-2">Boat collection</td><td class="py-2 text-right font-mono text-sm whitespace-nowrap">End of window</td></tr>
@@ -213,7 +218,7 @@
               <span class="faq-plus font-mono text-2xl text-pine leading-none mt-0.5">+</span>
             </summary>
             <p class="font-body text-[15px] text-ink/75 mt-3 leading-relaxed max-w-2xl">
-              Until dusk. The boats may not be operated from dusk to dawn, which is a requirement from our marine insurer and is not something we can waive. We collect the boat at the end of your rental window, which is 8:30 p.m. if you took the Ranger afternoon.
+              The boats may not be operated from dusk to dawn, even within a booked rental window. That is a requirement from our marine insurer and is not something we can waive. Be tied up before dusk. We collect the boat at the end of your rental window, which is 8:30 p.m. if you took the Ranger afternoon.
             </p>
           </details>
           <details class="faq py-5 group">
@@ -222,7 +227,7 @@
               <span class="faq-plus font-mono text-2xl text-pine leading-none mt-0.5">+</span>
             </summary>
             <p class="font-body text-[15px] text-ink/75 mt-3 leading-relaxed max-w-2xl">
-              No. Every rental starts with a driver orientation and a walk through the Wisconsin boating rules, and we take the time you need. If this would be your first time on a pontoon, tell us when you book so we can plan for a longer run-through. Anyone born on or after January 1, 1989 does need a Wisconsin Boating Safety Certificate to operate the boat.
+              Yes. Boat operators must be at least 16 years old and have prior boating experience. Every rental starts with a driver orientation and a walk through the Wisconsin boating rules. Anyone born on or after January 1, 1989 also needs a Wisconsin Boating Safety Certificate to operate the boat. Tell us about your experience when you book.
             </p>
           </details>
           <details class="faq py-5 group">
@@ -249,7 +254,7 @@
               <span class="faq-plus font-mono text-2xl text-pine leading-none mt-0.5">+</span>
             </summary>
             <p class="font-body text-[15px] text-ink/75 mt-3 leading-relaxed max-w-2xl">
-              A few. On Long Lake, Harbor View (east end) or Sandtrap Bar and Grill at Westwood Golf Course (west end). On Wilson, the Flyway resort (southwest end). On Solberg, Sunset Bay or the Polish Palace (both on the northeast side). Elk and Duroy don't have spots like that. They're stumpy, weedy fishing lakes, not cruising water.
+              Places to check include Harbor View on Long Lake, Sandtrap Bar and Grill at Westwood Golf Course, Flyway Resort on Wilson Lake, and Sunset Bay or Polish Palace on Solberg Lake. Call ahead to confirm current hours and whether visiting boaters can use the dock. Plan your return before dusk.
             </p>
           </details>
           <details class="faq py-5 group">
@@ -258,7 +263,7 @@
               <span class="faq-plus font-mono text-2xl text-pine leading-none mt-0.5">+</span>
             </summary>
             <p class="font-body text-[15px] text-ink/75 mt-3 leading-relaxed max-w-2xl">
-              We don't provide tubes, and nothing may be towed behind the boats unless we approve it in advance. Ask us before you book if that's part of your plan.
+              Towing is strictly prohibited, including tubes, water skis, wakeboards, kneeboards, and other towable devices.
             </p>
           </details>
           <details class="faq py-5 group">
@@ -277,7 +282,7 @@
   </div>
 </section>
 <section aria-label="Book a boat" class="relative bg-navy text-paper overflow-hidden py-20 lg:py-24">
-  <img src="/assets/img/contours.png?v=6670376c9d" alt="" aria-hidden="true" class="absolute -right-32 top-12 w-[640px] h-[640px] pointer-events-none" style="mix-blend-mode:lighten;opacity:.1" />
+  <img src="/assets/img/contours.webp?v=e89b882258" alt="" aria-hidden="true" loading="lazy" decoding="async" class="absolute -right-32 top-12 w-[640px] h-[640px] pointer-events-none" style="mix-blend-mode:lighten;opacity:.1" />
   <div class="relative max-w-[1440px] mx-auto px-6 lg:px-10 grid lg:grid-cols-12 gap-10 lg:gap-16 items-center">
     <div class="lg:col-span-7">
       <p class="eyebrow text-paper/60">Ready When You Are</p>
@@ -302,15 +307,16 @@
   <div class="max-w-[1100px] mx-auto px-6 lg:px-10 py-20 lg:py-28 text-center">
     <p class="eyebrow text-pine">A family-run outfit in Phillips, Wisconsin</p>
     <div class="mt-8 flex justify-center">
-      <img src="/assets/img/logo.png?v=944ca91017" alt="Phillips Pontoon Co. Pontoon Rentals, Phillips, Wisconsin" class="w-full max-w-[460px] h-auto" />
+      <img src="/assets/img/logo.png?v=944ca91017" alt="Phillips Pontoon Co. Pontoon Rentals, Phillips, Wisconsin" class="w-full max-w-[460px] h-auto" loading="lazy" decoding="async" />
     </div>
     <p class="font-body italic text-ink/65 mt-10 max-w-xl mx-auto leading-relaxed">
-      Built for slow mornings, long sunsets, and the company you brought along.
+      Built for slow mornings, days on the lake, and the company you brought along.
     </p>
   </div>
 </section>
+</main>
 <footer class="relative bg-navy-deep text-paper overflow-hidden">
-  <img src="/assets/img/footer-shore.png?v=0ebe885100" alt="" aria-hidden="true" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center bottom;opacity:.12;mix-blend-mode:lighten;pointer-events:none" />
+  <img src="/assets/img/footer-shore.webp?v=b1e21f23d2" alt="" aria-hidden="true" loading="lazy" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center bottom;opacity:.12;mix-blend-mode:lighten;pointer-events:none" />
 
   <div class="max-w-[1440px] mx-auto px-6 lg:px-10 py-20 lg:py-24">
 
@@ -352,14 +358,14 @@
         <div>
           <p class="eyebrow text-paper/55">Lake Mail</p>
           <p class="font-body text-paper/80 text-[14px] mt-4 leading-relaxed">Open dates on short notice, weather calls, and first pick next season.</p>
-          <form class="mt-5 ft-ml" data-ml="https://assets.mailerlite.com/jsonp/2512753/forms/193108855220078478/subscribe">
+          <form class="mt-5 ft-ml" data-ml="https://assets.mailerlite.com/jsonp/2512753/forms/193108855220078478/subscribe" action="https://assets.mailerlite.com/jsonp/2512753/forms/193108855220078478/subscribe" method="post">
             <div class="flex border-b border-paper/30 focus-within:border-paper transition">
-              <input type="email" name="fields[email]" required placeholder="you@somewhere.com" autocomplete="email" aria-label="Email address" class="flex-1 bg-transparent border-0 outline-none py-2 font-body text-[15px] text-paper placeholder:text-paper/40">
+              <input type="email" name="fields[email]" required placeholder="you@somewhere.com" autocomplete="email" aria-label="Email address" aria-describedby="footer-mail-status" class="flex-1 bg-transparent border-0 outline-none py-2 font-body text-[15px] text-paper placeholder:text-paper/40">
               <button type="submit" class="font-mono text-[11px] tracking-[0.18em] uppercase text-paper/85 hover:text-rust transition py-2">Send →</button>
             </div>
             <input type="hidden" name="ml-submit" value="1">
             <input type="hidden" name="anticsrf" value="true">
-            <p class="ft-ml-msg hidden mt-3 text-[12px] font-mono text-rust/90" role="status"></p>
+            <p id="footer-mail-status" class="ft-ml-msg hidden mt-3 text-[12px] font-mono text-rust/90" role="status" aria-live="polite" aria-atomic="true" tabindex="-1"></p>
           </form>
         </div>
       </div>
@@ -372,7 +378,7 @@
   </div>
 </footer>
 
-<script>(function(){var t=document.getElementById('mobtoggle'),n=document.getElementById('mobnav');if(t&&n)t.addEventListener('click',function(){var o=n.classList.toggle('hidden');t.setAttribute('aria-expanded',String(!o));});})();</script>
+
 <script src="https://fareharbor.com/embeds/api/v1/?autolightframe=yes"></script>
 </body>
 </html>

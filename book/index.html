@@ -8,7 +8,8 @@
 <meta name="theme-color" content="#1A2B47" />
 <link rel="icon" type="image/png" href="/assets/img/favicon.png?v=02477ecf2f" />
 <link rel="apple-touch-icon" href="/assets/img/favicon.png?v=02477ecf2f" />
-<link rel="stylesheet" href="/assets/site.css?v=dff257dace" />
+<link rel="stylesheet" href="/assets/site.css?v=20261018-opt1" />
+<script src="/assets/site.js?v=20261018-opt1" defer></script>
 <!-- seo:begin -->
 <link rel="canonical" href="https://phillipspontoonco.com/book/" />
 <meta property="og:type" content="website" />
@@ -26,8 +27,9 @@
 <!-- seo:end -->
 </head>
 <body class="bg-paper text-ink grain antialiased">
+<a class="skip-link" href="#main-content">Skip to content</a>
 <header class="sticky top-0 z-40 bg-paper/85 backdrop-blur-md border-b border-ink/10">
-  <nav class="max-w-[1440px] mx-auto px-6 lg:px-10 h-[68px] flex items-center justify-between gap-6">
+  <nav class="max-w-[1440px] mx-auto px-6 lg:px-10 h-[68px] flex items-center justify-between gap-6" aria-label="Primary navigation">
     <a href="/" class="flex items-center gap-3 group">
       <img src="/assets/img/logo.png?v=944ca91017" alt="Phillips Pontoon Co." class="h-12 w-12 object-contain">
       <div class="leading-none">
@@ -35,29 +37,30 @@
         <div class="eyebrow text-pine mt-1">Phillips · Wisconsin</div>
       </div>
     </a>
-    <ul class="hidden lg:flex items-center gap-8 text-[14px] font-body text-ink/80"><li><a href="/fleet/" class="hover:text-navy transition">The Fleet</a></li><li><a href="/book/" class="text-navy font-medium transition">Book</a></li><li><a href="/waters/" class="hover:text-navy transition">The Waters</a></li><li><a href="/rules/" class="hover:text-navy transition">Rules of the Lake</a></li><li><a href="/visit/" class="hover:text-navy transition">Plan a Visit</a></li></ul>
+    <ul class="hidden lg:flex items-center gap-8 text-[14px] font-body text-ink/80"><li><a href="/fleet/" class="hover:text-navy transition">The Fleet</a></li><li><a href="/book/" class="text-navy font-medium transition" aria-current="page">Book</a></li><li><a href="/waters/" class="hover:text-navy transition">The Waters</a></li><li><a href="/rules/" class="hover:text-navy transition">Rules of the Lake</a></li><li><a href="/visit/" class="hover:text-navy transition">Plan a Visit</a></li></ul>
     <!-- !hidden / md:!inline-flex: .btn-primary sets display:flex and custom CSS is
          appended after Tailwind in site.css, so a plain .hidden loses the cascade and
          the button used to show on phones, crushing the brand lockup. -->
     <a href="/book/" class="!hidden md:!inline-flex btn-primary !py-2.5 !px-5 !text-[12px]">Book a Boat <span aria-hidden="true">→</span></a>
-    <button id="mobtoggle" class="lg:hidden text-navy" aria-label="Menu" aria-expanded="false">
+    <button id="mobtoggle" class="lg:hidden text-navy" type="button" aria-label="Open menu" aria-controls="mobnav" aria-expanded="false">
       <svg viewBox="0 0 24 24" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 7h18M3 12h18M3 17h18"/></svg>
     </button>
   </nav>
-  <div id="mobnav" class="hidden lg:hidden border-t border-ink/10 bg-paper px-6 py-4 font-body text-[15px]"><a href="/fleet/" class="block py-2 text-ink/80">The Fleet</a><a href="/book/" class="block py-2 text-navy font-medium">Book</a><a href="/waters/" class="block py-2 text-ink/80">The Waters</a><a href="/rules/" class="block py-2 text-ink/80">Rules of the Lake</a><a href="/visit/" class="block py-2 text-ink/80">Plan a Visit</a>
+  <div id="mobnav" role="navigation" aria-label="Mobile navigation" class="hidden lg:hidden border-t border-ink/10 bg-paper px-6 py-4 font-body text-[15px]"><a href="/fleet/" class="block py-2 text-ink/80">The Fleet</a><a href="/book/" class="block py-2 text-navy font-medium" aria-current="page">Book</a><a href="/waters/" class="block py-2 text-ink/80">The Waters</a><a href="/rules/" class="block py-2 text-ink/80">Rules of the Lake</a><a href="/visit/" class="block py-2 text-ink/80">Plan a Visit</a>
     <a href="/book/" class="block py-2 text-rust font-medium">Book a boat →</a>
   </div>
 </header>
+<main id="main-content" tabindex="-1">
 <section id="book" class="relative py-24 lg:py-36 bg-navy text-paper overflow-hidden">
   <!-- decorative topo lines -->
-  <img src="/assets/img/contours.png?v=6670376c9d" alt="" aria-hidden="true" class="absolute -right-32 top-12 w-[640px] h-[640px] pointer-events-none" style="mix-blend-mode:lighten;opacity:.1" />
+  <img src="/assets/img/contours.webp?v=e89b882258" alt="" aria-hidden="true" class="absolute -right-32 top-12 w-[640px] h-[640px] pointer-events-none" style="mix-blend-mode:lighten;opacity:.1" />
 
   <div class="relative max-w-[1440px] mx-auto px-6 lg:px-10 grid lg:grid-cols-12 gap-10 lg:gap-20 items-start">
 
     <div class="lg:col-span-5">
       <div class="chapter-num text-paper/25 text-[120px] lg:text-[200px]">02</div>
       <p class="eyebrow text-paper/60 mt-4">Chapter Two</p>
-      <h2 class="font-display text-4xl lg:text-[56px] leading-[0.95] mt-3 tighter">Book your day</h2>
+      <h1 class="font-display text-4xl lg:text-[56px] leading-[0.95] mt-3 tighter">Book your day</h1>
       <div class="wave-rule light mt-7"></div>
       <p class="font-body text-paper/80 mt-6 leading-relaxed max-w-md">
         We're closed for 2026. Our 2027 season runs May 8 through October 10. Pick your boat and your day and book it right here. The calendar opens in a window on this page, so you never leave the site.
@@ -83,7 +86,7 @@
           <span class="font-display text-paper/60 text-3xl leading-none" style="font-variation-settings:'opsz' 36,'SOFT' 60;">03</span>
           <div>
             <p class="font-display text-lg text-paper" style="font-variation-settings:'opsz' 24,'SOFT' 60;">Sign the waiver before you go</p>
-            <p class="font-body text-paper/70 text-sm mt-1.5 leading-relaxed">Right after you book, we email you the rental agreement and waiver to sign electronically. Please sign before your rental day. Bring a valid driver's license with you. The renter has to be 21 or older. At the dock, everyone riding signs our insurer's safety checklist during your orientation.</p>
+            <p class="font-body text-paper/70 text-sm mt-1.5 leading-relaxed">Right after you book, we email you the rental agreement and waiver to sign electronically. Please sign before your rental begins. Bring a valid driver's license with you. The renter has to be 21 or older. At the dock, everyone riding signs our insurer's safety checklist during your orientation.</p>
           </div>
         </li>
       </ol>
@@ -100,8 +103,8 @@
 
            Live booking. The Lightframe API script at the bottom of this
            page turns the two links below into overlay calendars, so the
-           customer picks a time, pays, and signs the waivers without
-           leaving the site. Pontoon = item 747377, Ranger = item 747430,
+           customer picks a time and pays without leaving the site.
+           The waiver is emailed after checkout. Pontoon = item 747377, Ranger = item 747430,
            both on flow 1675621. Do not strip the ?full-items=yes&flow=
            query string; the flow id is what carries the waivers.
 
@@ -136,12 +139,12 @@
             <div class="border border-ink/10 bg-paper-warm/40 p-6 sm:p-7">
               <p class="eyebrow text-pine">The Fishing Boat</p>
               <h4 class="font-display text-2xl text-navy mt-1" style="font-variation-settings:'opsz' 30,'SOFT' 60;">1998 Ranger 692 Fisherman</h4>
-              <p class="font-body text-sm text-ink/70 mt-2 leading-relaxed">18 ft 9 in deep V, seats five to seven. Two runs a day, $230 each. Morning is 5:30 a.m. to 12:30 p.m. Afternoon is 1:30 p.m. to 8:30 p.m.</p>
+              <p class="font-body text-sm text-ink/70 mt-2 leading-relaxed">18 ft 9 in deep V, seats five to seven. Two runs a day, $230 each. Morning is 5:30 a.m. to 12:30 p.m. Afternoon is 1:30 p.m. to 8:30 p.m. The boats may not be operated from dusk to dawn, even within a booked rental window.</p>
               <a href="https://fareharbor.com/embeds/book/phillipspontoonco/items/747430/?full-items=yes&amp;flow=1675621" class="btn-stamp mt-5">Book the Ranger <svg class="w-4 h-4" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 8h12M9 3l5 5-5 5"/></svg></a>
             </div>
           </div>
 
-          <p class="font-body text-[14px] text-ink/55 mt-6 leading-relaxed">2027 prices shown are per boat. A required $80 delivery and collection fee is added once per booking at checkout, along with Wisconsin sales tax (5.5%).</p>
+          <p class="font-body text-[14px] text-ink/55 mt-6 leading-relaxed">2027 prices shown are per boat. A required $80 delivery and collection fee is added once per booking at checkout, along with Wisconsin sales tax (5.5%). A FareHarbor booking fee is also added at checkout.</p>
 
           <div class="mt-8 pt-6 border-t border-ink/15 grid sm:grid-cols-2 gap-5 font-body text-sm text-ink/70 leading-relaxed">
             <div>
@@ -177,7 +180,7 @@
             </div>
             <div>
               <label class="field-label" for="wl-email">Email</label>
-              <input class="field" id="wl-email" name="fields[email]" type="email" required aria-required="true" placeholder="you@somewhere.com" autocomplete="email">
+              <input class="field" id="wl-email" name="fields[email]" type="email" required aria-required="true" aria-describedby="wl-error" placeholder="you@somewhere.com" autocomplete="email">
             </div>
           </div>
 
@@ -194,7 +197,7 @@
           <p class="font-body text-xs text-ink/50 mt-5 leading-relaxed">No spam. You'll hear from us when a date opens up on short notice or weather moves a rental, plus one note when next season's calendar goes live.</p>
         </form>
 
-        <div id="wl-success" class="hidden text-center py-2">
+        <div id="wl-success" class="hidden text-center py-2" role="status" aria-live="polite" tabindex="-1">
           <div class="w-14 h-14 mx-auto rounded-full bg-pine/10 flex items-center justify-center mb-5">
             <svg class="w-7 h-7 text-pine" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M5 13l4 4L19 7"/></svg>
           </div>
@@ -204,45 +207,13 @@
         </div>
       </div>
 
-      <script>
-        (function () {
-          var f = document.getElementById('wl-form');
-          if (!f) return;
-          var email = document.getElementById('wl-email'),
-              err   = document.getElementById('wl-error'),
-              btn   = document.getElementById('wl-submit'),
-              lbl   = document.getElementById('wl-submit-label'),
-              ok    = document.getElementById('wl-success');
-          function showErr(m) { err.textContent = m; err.classList.remove('hidden'); }
-          function reset()    { btn.disabled = false; lbl.textContent = 'Get Lake Mail'; }
-          function valid(v)   { return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v); }
-          var FALLBACK = 'Something went wrong. Please try again, or text 715-564-4355.';
-          f.addEventListener('submit', function (e) {
-            e.preventDefault();
-            err.classList.add('hidden');
-            var v = (email.value || '').trim();
-            if (!valid(v)) { showErr('Please enter a valid email address.'); email.focus(); return; }
-            btn.disabled = true; lbl.textContent = 'Adding you...';
-            // MailerLite's subscribe endpoint is CORS-open and returns JSON, so we
-            // read the real answer and only celebrate on {"success":true}.
-            fetch(f.action, { method: 'POST', body: new FormData(f) })
-              .then(function (r) { return r.json().catch(function () { return { success: false }; }); })
-              .then(function (j) {
-                if (j && j.success) { f.classList.add('hidden'); ok.classList.remove('hidden'); return; }
-                reset();
-                var msg = FALLBACK;
-                if (j && j.errors && j.errors.fields && j.errors.fields.email) { msg = j.errors.fields.email[0]; }
-                showErr(msg);
-              })
-              .catch(function () { reset(); showErr(FALLBACK); });
-          });
-        })();
-      </script>
+
     </div>
   </div>
 </section>
+</main>
 <footer class="relative bg-navy-deep text-paper overflow-hidden">
-  <img src="/assets/img/footer-shore.png?v=0ebe885100" alt="" aria-hidden="true" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center bottom;opacity:.12;mix-blend-mode:lighten;pointer-events:none" />
+  <img src="/assets/img/footer-shore.webp?v=b1e21f23d2" alt="" aria-hidden="true" loading="lazy" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center bottom;opacity:.12;mix-blend-mode:lighten;pointer-events:none" />
 
   <div class="max-w-[1440px] mx-auto px-6 lg:px-10 py-20 lg:py-24">
 
@@ -284,14 +255,14 @@
         <div>
           <p class="eyebrow text-paper/55">Lake Mail</p>
           <p class="font-body text-paper/80 text-[14px] mt-4 leading-relaxed">Open dates on short notice, weather calls, and first pick next season.</p>
-          <form class="mt-5 ft-ml" data-ml="https://assets.mailerlite.com/jsonp/2512753/forms/193108855220078478/subscribe">
+          <form class="mt-5 ft-ml" data-ml="https://assets.mailerlite.com/jsonp/2512753/forms/193108855220078478/subscribe" action="https://assets.mailerlite.com/jsonp/2512753/forms/193108855220078478/subscribe" method="post">
             <div class="flex border-b border-paper/30 focus-within:border-paper transition">
-              <input type="email" name="fields[email]" required placeholder="you@somewhere.com" autocomplete="email" aria-label="Email address" class="flex-1 bg-transparent border-0 outline-none py-2 font-body text-[15px] text-paper placeholder:text-paper/40">
+              <input type="email" name="fields[email]" required placeholder="you@somewhere.com" autocomplete="email" aria-label="Email address" aria-describedby="footer-mail-status" class="flex-1 bg-transparent border-0 outline-none py-2 font-body text-[15px] text-paper placeholder:text-paper/40">
               <button type="submit" class="font-mono text-[11px] tracking-[0.18em] uppercase text-paper/85 hover:text-rust transition py-2">Send →</button>
             </div>
             <input type="hidden" name="ml-submit" value="1">
             <input type="hidden" name="anticsrf" value="true">
-            <p class="ft-ml-msg hidden mt-3 text-[12px] font-mono text-rust/90" role="status"></p>
+            <p id="footer-mail-status" class="ft-ml-msg hidden mt-3 text-[12px] font-mono text-rust/90" role="status" aria-live="polite" aria-atomic="true" tabindex="-1"></p>
           </form>
         </div>
       </div>
@@ -306,6 +277,6 @@
 
 <!-- FareHarbor Lightframe API - do not remove -->
 <script src="https://fareharbor.com/embeds/api/v1/?autolightframe=yes"></script>
-<script>(function(){var t=document.getElementById('mobtoggle'),n=document.getElementById('mobnav');if(t&&n)t.addEventListener('click',function(){var o=n.classList.toggle('hidden');t.setAttribute('aria-expanded',String(!o));});})();</script>
+
 </body>
 </html>

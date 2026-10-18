@@ -8,7 +8,8 @@
 <meta name="theme-color" content="#1A2B47" />
 <link rel="icon" type="image/png" href="/assets/img/favicon.png?v=02477ecf2f" />
 <link rel="apple-touch-icon" href="/assets/img/favicon.png?v=02477ecf2f" />
-<link rel="stylesheet" href="/assets/site.css?v=dff257dace" />
+<link rel="stylesheet" href="/assets/site.css?v=20261018-opt1" />
+<script src="/assets/site.js?v=20261018-opt1" defer></script>
 <!-- seo:begin -->
 <link rel="canonical" href="https://phillipspontoonco.com/" />
 <meta property="og:type" content="website" />
@@ -29,8 +30,8 @@
   "@type": "LocalBusiness",
   "@id": "https://phillipspontoonco.com/#business",
   "name": "Phillips Pontoon Co.",
-  "legalName": "Phillips Pontoon Co., LLC",
-  "description": "Family-run pontoon and fishing boat rentals in Phillips, Wisconsin, in Price County. Closed for 2026. The 2027 season runs May 8 through October 10. Both boats are delivery only. A required $80 delivery and collection fee is added once per booking at checkout for lakes within 30 miles of Phillips.",
+  "legalName": "Phillips Pontoon Co, LLC",
+  "description": "Family-run pontoon and fishing boat rentals in Phillips, Wisconsin, in Price County. Closed for 2026. The 2027 season runs May 8 through October 10. Both boats are delivery only. A required $80 delivery and collection fee is added once per booking at checkout for lakes within 30 miles of Phillips. Wisconsin sales tax and a FareHarbor booking fee are also added at checkout.",
   "url": "https://phillipspontoonco.com/",
   "telephone": "+1-715-564-4355",
   "email": "bookings@phillipspontoonco.com",
@@ -106,7 +107,7 @@
     {
       "@type": "Offer",
       "name": "Pontoon rental, full day",
-      "description": "Full day runs 9:00 a.m. to 5:00 p.m. Extra hours added onto a single-day rental are $30 per hour, subject to availability and owner approval. Multi-day rates: 2 days $650, 3 days $970, 4 days $1,275, 5 days $1,580, 6 days $1,885, 7 days $2,190. Full-day rentals run one to seven days. Multi-day rentals go by the day. Half-day rates and add-on hours do not apply to them. Both boats are delivery only. A required $80 delivery and collection fee is added once per booking at checkout.",
+      "description": "Full day runs 9:00 a.m. to 5:00 p.m. Extra hours added onto a single-day rental are $30 per hour, subject to availability and owner approval. Multi-day rates: 2 days $650, 3 days $970, 4 days $1,275, 5 days $1,580, 6 days $1,885, 7 days $2,190. Full-day rentals run one to seven days. Multi-day rentals go by the day. Half-day rates and add-on hours do not apply to them. Both boats are delivery only. A required $80 delivery and collection fee is added once per booking at checkout. Wisconsin sales tax and a FareHarbor booking fee are also added at checkout.",
       "price": "330.00",
       "priceCurrency": "USD",
       "availabilityStarts": "2027-05-08",
@@ -124,7 +125,7 @@
     {
       "@type": "Offer",
       "name": "Pontoon rental, half day",
-      "description": "Half-day rental of the 25 ft TMC pontoon. Four hours, either 9:00 a.m. to 1:00 p.m. or 2:00 p.m. to 6:00 p.m. Delivery only. A required $80 delivery and collection fee is added once per booking at checkout.",
+      "description": "Half-day rental of the 25 ft TMC pontoon. Four hours, either 9:00 a.m. to 1:00 p.m. or 2:00 p.m. to 6:00 p.m. Delivery only. A required $80 delivery and collection fee is added once per booking at checkout. Wisconsin sales tax and a FareHarbor booking fee are also added at checkout.",
       "price": "250.00",
       "priceCurrency": "USD",
       "availabilityStarts": "2027-05-08",
@@ -141,7 +142,7 @@
     {
       "@type": "Offer",
       "name": "Fishing boat rental, morning",
-      "description": "Morning trip runs 5:30 a.m. to 12:30 p.m. Additional hours are $25 per hour, approved in advance. Delivery only. A required $80 delivery and collection fee is added once per booking at checkout.",
+      "description": "Morning trip runs 5:30 a.m. to 12:30 p.m. The boat may not be operated from dusk to dawn, even within a booked rental window. Additional hours are $25 per hour, approved in advance. Delivery only. A required $80 delivery and collection fee is added once per booking at checkout. Wisconsin sales tax and a FareHarbor booking fee are also added at checkout.",
       "price": "230.00",
       "priceCurrency": "USD",
       "availabilityStarts": "2027-05-08",
@@ -159,7 +160,7 @@
     {
       "@type": "Offer",
       "name": "Fishing boat rental, afternoon",
-      "description": "Afternoon trip runs 1:30 p.m. to 8:30 p.m. Additional hours are $25 per hour, approved in advance. Delivery only. A required $80 delivery and collection fee is added once per booking at checkout.",
+      "description": "Afternoon trip runs 1:30 p.m. to 8:30 p.m. The boat may not be operated from dusk to dawn, even within a booked rental window. Additional hours are $25 per hour, approved in advance. Delivery only. A required $80 delivery and collection fee is added once per booking at checkout. Wisconsin sales tax and a FareHarbor booking fee are also added at checkout.",
       "price": "230.00",
       "priceCurrency": "USD",
       "availabilityStarts": "2027-05-08",
@@ -212,8 +213,9 @@
 <!-- seo:end -->
 </head>
 <body class="bg-paper text-ink grain antialiased">
+<a class="skip-link" href="#main-content">Skip to content</a>
 <header class="sticky top-0 z-40 bg-paper/85 backdrop-blur-md border-b border-ink/10">
-  <nav class="max-w-[1440px] mx-auto px-6 lg:px-10 h-[68px] flex items-center justify-between gap-6">
+  <nav class="max-w-[1440px] mx-auto px-6 lg:px-10 h-[68px] flex items-center justify-between gap-6" aria-label="Primary navigation">
     <a href="/" class="flex items-center gap-3 group">
       <img src="/assets/img/logo.png?v=944ca91017" alt="Phillips Pontoon Co." class="h-12 w-12 object-contain">
       <div class="leading-none">
@@ -226,18 +228,19 @@
          appended after Tailwind in site.css, so a plain .hidden loses the cascade and
          the button used to show on phones, crushing the brand lockup. -->
     <a href="/book/" class="!hidden md:!inline-flex btn-primary !py-2.5 !px-5 !text-[12px]">Book a Boat <span aria-hidden="true">→</span></a>
-    <button id="mobtoggle" class="lg:hidden text-navy" aria-label="Menu" aria-expanded="false">
+    <button id="mobtoggle" class="lg:hidden text-navy" type="button" aria-label="Open menu" aria-controls="mobnav" aria-expanded="false">
       <svg viewBox="0 0 24 24" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 7h18M3 12h18M3 17h18"/></svg>
     </button>
   </nav>
-  <div id="mobnav" class="hidden lg:hidden border-t border-ink/10 bg-paper px-6 py-4 font-body text-[15px]"><a href="/fleet/" class="block py-2 text-ink/80">The Fleet</a><a href="/book/" class="block py-2 text-ink/80">Book</a><a href="/waters/" class="block py-2 text-ink/80">The Waters</a><a href="/rules/" class="block py-2 text-ink/80">Rules of the Lake</a><a href="/visit/" class="block py-2 text-ink/80">Plan a Visit</a>
+  <div id="mobnav" role="navigation" aria-label="Mobile navigation" class="hidden lg:hidden border-t border-ink/10 bg-paper px-6 py-4 font-body text-[15px]"><a href="/fleet/" class="block py-2 text-ink/80">The Fleet</a><a href="/book/" class="block py-2 text-ink/80">Book</a><a href="/waters/" class="block py-2 text-ink/80">The Waters</a><a href="/rules/" class="block py-2 text-ink/80">Rules of the Lake</a><a href="/visit/" class="block py-2 text-ink/80">Plan a Visit</a>
     <a href="/book/" class="block py-2 text-rust font-medium">Book a boat →</a>
   </div>
 </header>
+<main id="main-content" tabindex="-1">
 <section id="top" class="relative min-h-[100vh] flex items-end overflow-hidden pt-[68px]">
   <!-- Hero photograph + brand treatment overlays -->
   <div class="absolute inset-0">
-    <img src="/assets/img/hero.jpg?v=629f6e32ad" alt="" class="absolute inset-0 w-full h-full object-cover" />
+    <img src="/assets/img/hero.jpg?v=629f6e32ad" alt="" loading="eager" fetchpriority="high" class="absolute inset-0 w-full h-full object-cover" />
     <!-- subtle navy/pine duotone bias to lock to brand palette -->
     <div class="absolute inset-0 mix-blend-multiply opacity-25" style="background: linear-gradient(160deg, #1A2B47 0%, #2E4E33 100%);"></div>
     <!-- bottom vignette for headline legibility -->
@@ -427,7 +430,7 @@
 
         <div class="mt-auto pt-6">
           <p class="font-body text-[14px] text-ink/60 leading-relaxed">
-            Additional hours have to be approved before you head out. After collection, we charge only the gas used at the current pump price, with no service fee.
+            Additional hours have to be approved before you head out. The boats may not be operated from dusk to dawn, even within a booked rental window. After collection, we charge only the gas used at the current pump price, with no service fee.
           </p>
           <a href="https://fareharbor.com/embeds/book/phillipspontoonco/items/747430/?full-items=yes&amp;flow=1675621" class="btn-stamp mt-5 w-full justify-center">Book the Ranger <svg class="w-4 h-4" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 8h12M9 3l5 5-5 5"/></svg></a>
         </div>
@@ -436,7 +439,7 @@
     </div>
 
     <p class="mt-8 text-center font-body text-sm italic text-ink/60">
-      Rates are per boat. A required $80 delivery and collection fee is added once per booking at checkout, along with Wisconsin sales tax (5.5%). You pay when you book, and the rental agreement comes by email to sign before your day.
+      Rates are per boat. A required $80 delivery and collection fee is added once per booking at checkout, along with Wisconsin sales tax (5.5%). A FareHarbor booking fee is also added at checkout. You pay when you book, and the rental agreement comes by email to sign before your rental begins.
     </p>
   </div>
 </section>
@@ -534,15 +537,16 @@
   <div class="max-w-[1100px] mx-auto px-6 lg:px-10 py-20 lg:py-28 text-center">
     <p class="eyebrow text-pine">A family-run outfit in Phillips, Wisconsin</p>
     <div class="mt-8 flex justify-center">
-      <img src="/assets/img/logo.png?v=944ca91017" alt="Phillips Pontoon Co. Pontoon and fishing boat rentals in Phillips, Wisconsin." class="w-full max-w-[460px] h-auto" />
+      <img src="/assets/img/logo.png?v=944ca91017" alt="Phillips Pontoon Co. Pontoon and fishing boat rentals in Phillips, Wisconsin." class="w-full max-w-[460px] h-auto" loading="lazy" decoding="async" />
     </div>
     <p class="font-body italic text-ink/65 mt-10 max-w-xl mx-auto leading-relaxed">
-      Built for slow mornings, long sunsets, and the company you brought along.
+      Built for slow mornings, days on the lake, and the company you brought along.
     </p>
   </div>
 </section>
+</main>
 <footer class="relative bg-navy-deep text-paper overflow-hidden">
-  <img src="/assets/img/footer-shore.png?v=0ebe885100" alt="" aria-hidden="true" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center bottom;opacity:.12;mix-blend-mode:lighten;pointer-events:none" />
+  <img src="/assets/img/footer-shore.webp?v=b1e21f23d2" alt="" aria-hidden="true" loading="lazy" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center bottom;opacity:.12;mix-blend-mode:lighten;pointer-events:none" />
 
   <div class="max-w-[1440px] mx-auto px-6 lg:px-10 py-20 lg:py-24">
 
@@ -584,14 +588,14 @@
         <div>
           <p class="eyebrow text-paper/55">Lake Mail</p>
           <p class="font-body text-paper/80 text-[14px] mt-4 leading-relaxed">Open dates on short notice, weather calls, and first pick next season.</p>
-          <form class="mt-5 ft-ml" data-ml="https://assets.mailerlite.com/jsonp/2512753/forms/193108855220078478/subscribe">
+          <form class="mt-5 ft-ml" data-ml="https://assets.mailerlite.com/jsonp/2512753/forms/193108855220078478/subscribe" action="https://assets.mailerlite.com/jsonp/2512753/forms/193108855220078478/subscribe" method="post">
             <div class="flex border-b border-paper/30 focus-within:border-paper transition">
-              <input type="email" name="fields[email]" required placeholder="you@somewhere.com" autocomplete="email" aria-label="Email address" class="flex-1 bg-transparent border-0 outline-none py-2 font-body text-[15px] text-paper placeholder:text-paper/40">
+              <input type="email" name="fields[email]" required placeholder="you@somewhere.com" autocomplete="email" aria-label="Email address" aria-describedby="footer-mail-status" class="flex-1 bg-transparent border-0 outline-none py-2 font-body text-[15px] text-paper placeholder:text-paper/40">
               <button type="submit" class="font-mono text-[11px] tracking-[0.18em] uppercase text-paper/85 hover:text-rust transition py-2">Send →</button>
             </div>
             <input type="hidden" name="ml-submit" value="1">
             <input type="hidden" name="anticsrf" value="true">
-            <p class="ft-ml-msg hidden mt-3 text-[12px] font-mono text-rust/90" role="status"></p>
+            <p id="footer-mail-status" class="ft-ml-msg hidden mt-3 text-[12px] font-mono text-rust/90" role="status" aria-live="polite" aria-atomic="true" tabindex="-1"></p>
           </form>
         </div>
       </div>
@@ -604,7 +608,7 @@
   </div>
 </footer>
 
-<script>(function(){var t=document.getElementById('mobtoggle'),n=document.getElementById('mobnav');if(t&&n)t.addEventListener('click',function(){var o=n.classList.toggle('hidden');t.setAttribute('aria-expanded',String(!o));});})();</script>
+
 <script src="https://fareharbor.com/embeds/api/v1/?autolightframe=yes"></script>
 </body>
 </html>
