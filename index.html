@@ -4,12 +4,14 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Pontoon Rentals in Phillips, WI | Phillips Pontoon Co.</title>
-<meta name="description" content="Family-run boat rentals around Phillips, Wisconsin. Closed for 2026. Book May 8 through October 10, 2027. Delivery only, with an $80 fee per booking." />
+<meta name="description" content="Family-run boat rentals around Phillips, Wisconsin. Book your 2027 lake day, May 8 through October 10. Delivery only, with an $80 fee per booking." />
 <meta name="theme-color" content="#1A2B47" />
 <link rel="icon" type="image/png" href="/assets/img/favicon.png?v=02477ecf2f" />
 <link rel="apple-touch-icon" href="/assets/img/favicon.png?v=02477ecf2f" />
 <link rel="stylesheet" href="/assets/site.css?v=20261018-opt1" />
+<link rel="stylesheet" href="/assets/season.css?v=20261018-season1" />
 <script src="/assets/site.js?v=20261018-opt1" defer></script>
+<script src="/assets/season.js?v=20261018-season1" defer></script>
 <!-- seo:begin -->
 <link rel="canonical" href="https://phillipspontoonco.com/" />
 <meta property="og:type" content="website" />
@@ -17,12 +19,12 @@
 <meta property="og:locale" content="en_US" />
 <meta property="og:url" content="https://phillipspontoonco.com/" />
 <meta property="og:title" content="Boat Rentals around Phillips, Wisconsin" />
-<meta property="og:description" content="A 25-foot pontoon that seats 15, and a Ranger 692 for fishing. Closed for 2026. Book May 8 through October 10, 2027, in Phillips, Wisconsin." />
+<meta property="og:description" content="A 25-foot pontoon that seats 15, and a Ranger 692 for fishing. Book your 2027 lake day, May 8 through October 10, in Phillips, Wisconsin." />
 <meta property="og:image" content="https://phillipspontoonco.com/assets/img/hero.jpg" />
 <meta property="og:image:alt" content="A pontoon boat on a Northwoods lake near Phillips, Wisconsin" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="Boat Rentals around Phillips, Wisconsin" />
-<meta name="twitter:description" content="A 25-foot pontoon that seats 15, and a Ranger 692 for fishing. Closed for 2026. Book May 8 through October 10, 2027, in Phillips, Wisconsin." />
+<meta name="twitter:description" content="A 25-foot pontoon that seats 15, and a Ranger 692 for fishing. Book your 2027 lake day, May 8 through October 10, in Phillips, Wisconsin." />
 <meta name="twitter:image" content="https://phillipspontoonco.com/assets/img/hero.jpg" />
 <script type="application/ld+json">
 {
@@ -31,7 +33,7 @@
   "@id": "https://phillipspontoonco.com/#business",
   "name": "Phillips Pontoon Co.",
   "legalName": "Phillips Pontoon Co, LLC",
-  "description": "Family-run pontoon and fishing boat rentals in Phillips, Wisconsin, in Price County. Closed for 2026. The 2027 season runs May 8 through October 10. Both boats are delivery only. A required $80 delivery and collection fee is added once per booking at checkout for lakes within 30 miles of Phillips. Wisconsin sales tax and a FareHarbor booking fee are also added at checkout.",
+  "description": "Family-run pontoon and fishing boat rentals in Phillips, Wisconsin, in Price County. The 2027 season runs May 8 through October 10. Both boats are delivery only. A required $80 delivery and collection fee is added once per booking at checkout for lakes within 30 miles of Phillips. Wisconsin sales tax and a FareHarbor booking fee are also added at checkout.",
   "url": "https://phillipspontoonco.com/",
   "telephone": "+1-715-564-4355",
   "email": "bookings@phillipspontoonco.com",
@@ -270,11 +272,18 @@
 
       <div class="lg:col-span-4 rise d-5">
         <div class="border-l border-paper/25 pl-6 max-w-xs">
-          <p class="eyebrow text-paper/70">Now booking</p>
-          <p class="font-display text-paper text-3xl mt-3" style="font-variation-settings:'opsz' 36,'SOFT' 60;">The 2027 season</p>
-          <p class="font-body text-sm text-paper/75 mt-3 leading-relaxed">
-            We're closed for 2026. Book ahead for May 8 through October 10, 2027.
-          </p>
+          <div class="season-countdown" data-season-countdown data-season-opens="2027-05-08T00:00:00-05:00" hidden>
+            <h2 class="font-display season-heading">Lake days return in</h2>
+            <div class="season-clock" aria-hidden="true">
+              <div><span class="season-digit" data-countdown-days></span><span class="season-unit">Days</span></div>
+              <div><span class="season-digit" data-countdown-hours></span><span class="season-unit">Hrs</span></div>
+              <div><span class="season-digit" data-countdown-minutes></span><span class="season-unit">Min</span></div>
+              <div><span class="season-digit" data-countdown-seconds></span><span class="season-unit">Sec</span></div>
+            </div>
+            <p class="season-sr-only" data-countdown-summary></p>
+            <a class="season-book" href="/book/">Book your 2027 lake day <span aria-hidden="true">→</span></a>
+          </div>
+          <p class="season-dates">2027 season · May 8–October 10</p>
           <div id="hero-wx" class="mt-6 pt-5 border-t border-paper/20 hidden" data-lat="45.6953" data-lon="-90.4040">
             <p class="eyebrow text-paper/55">Phillips weather</p>
             <div class="mt-2.5 flex items-end gap-3">
@@ -556,10 +565,10 @@
       <div class="lg:col-span-5">
         <p class="eyebrow text-paper/55">Phillips Pontoon Co.</p>
         <h3 class="font-display text-3xl lg:text-[40px] leading-[1.05] mt-4 tighter" style="font-variation-settings:'opsz' 60,'SOFT' 60;">
-          Back on the water May&nbsp;8, 2027.
+          Your next lake day starts here.
         </h3>
         <p class="font-body italic text-paper/75 mt-6 max-w-md leading-relaxed">
-          Family-run in Phillips, Wisconsin. Closed for 2026. Our 2027 season runs May&nbsp;8 through October&nbsp;10.
+          Family-run in Phillips, Wisconsin. Our 2027 season runs May&nbsp;8 through October&nbsp;10.
         </p>
       </div>
 
